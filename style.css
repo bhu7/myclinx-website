@@ -1,0 +1,6193 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box
+}
+ :root{
+    --navy:#092552;
+    --blue:#0c63df;
+    --green:#0b9c58;
+    --text:#0b2854;
+    --muted:#687792;
+    --border:#e8edf4
+}
+ html{
+    scroll-behavior:smooth
+}
+ body{
+    font-family:Inter,Arial,sans-serif;
+    color:var(--text);
+    background:#fff;
+    overflow-x:hidden
+}
+ a{
+    text-decoration:none;
+    color:inherit
+}
+ button{
+    font:inherit
+}
+ .myclinx-container{
+    width:min(1340px,calc(100% - 96px));
+    margin:auto
+}
+/* Header */
+.myclinx-header {
+    height: 64px;
+    border-bottom: 1px solid #edf1f6;
+    background: rgba(255, 255, 255, 0.97);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 9999;
+
+    box-shadow: 0 2px 15px rgba(9, 38, 83, 0.06);
+
+    backdrop-filter: blur(10px);
+}
+
+ .myclinx-nav{
+    height:100%;
+    display:flex;
+    align-items:center
+}
+ .myclinx-logo{
+    width:160px;
+    line-height:1
+}
+ .myclinx-logo-word{
+    font-size:31px;
+    font-weight:800;
+    letter-spacing:-2px;
+    color:#092b5e
+}
+ .myclinx-logo-word span{
+    color:#109f60;
+    position:relative
+}
+ .myclinx-logo-word span:before{
+    content:"";
+    position:absolute;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#10a360;
+    top:-7px;
+    left:5px
+}
+ .myclinx-logo-sub{
+    font-size:5.5px;
+    letter-spacing:1px;
+    font-weight:600;
+    margin:3px 0 0 4px;
+    color:#65728a
+}
+ .myclinx-navigation{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:31px;
+    flex:1;
+    height:100%
+}
+ .myclinx-navigation a{
+    font-size:13px;
+    font-weight:600;
+    color:#112b52;
+    height:100%;
+    display:flex;
+    align-items:center;
+    position:relative
+}
+ .myclinx-navigation a.active:after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:2px;
+    background:#246fe0
+}
+ .myclinx-nav-actions{
+    display:flex;
+    align-items:center;
+    gap:9px
+}
+ .myclinx-login,.myclinx-start{
+    height:29px;
+    padding:0 18px;
+    border-radius:5px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    font-weight:600
+}
+ .myclinx-login{
+    border:1px solid #4a8ee8;
+    color:#0c5fcf;
+    background:#fff
+}
+ .myclinx-start{
+    background:#07934f;
+    color:#fff;
+    padding:0 17px
+}
+ .myclinx-menu{
+    display:none
+}
+
+
+
+
+/*hero section new main*/
+/* =========================================================
+   myclinx HERO MAIN
+========================================================= */
+
+.myclinx-heromain {
+    width: 100%;
+    padding: 35px 0 28px;
+
+    background:
+        radial-gradient(
+            circle at 67% 45%,
+            rgba(225, 239, 255, .75),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 92% 50%,
+            rgba(215, 247, 233, .8),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #fbfdff 0%,
+            #ffffff 60%,
+            #f8fffb 100%
+        );
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.myclinx-heromain-container {
+    width: min(1180px, calc(100% - 70px));
+
+    min-height: 570px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 42% 58%;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.myclinx-heromain-content {
+    position: relative;
+    z-index: 5;
+
+    padding: 20px 0 20px 5px;
+}
+
+
+/* Badge */
+
+.myclinx-heromain-badge {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 6px 11px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.8);
+
+    color: #183758;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    box-shadow:
+        0 4px 15px rgba(20,55,90,.05);
+}
+
+.myclinx-heromain-badge-icon {
+    width: 19px;
+    height: 19px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #e3f7ed;
+
+    color: #079755;
+
+    font-size: 11px;
+}
+
+
+/* Heading */
+
+.myclinx-heromain-title {
+    max-width: 560px;
+
+    margin: 20px 0 0;
+
+    color: #092653;
+
+    font-size: clamp(38px, 4vw, 55px);
+
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+
+    font-weight: 800;
+}
+
+.myclinx-heromain-title strong {
+    display: inline-block;
+
+    color: #079957;
+
+    position: relative;
+}
+
+.myclinx-heromain-title strong::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 28%;
+
+    bottom: -8px;
+
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #0a9e5b;
+
+    transform: rotate(-2deg);
+}
+
+
+/* Description */
+
+.myclinx-heromain-description {
+    max-width: 470px;
+
+    margin: 22px 0 0;
+
+    color: #5d708b;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+}
+
+.myclinx-heromain-description b {
+    color: #233b5d;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.myclinx-heromain-features {
+    max-width: 475px;
+
+    display: grid;
+
+    gap: 9px;
+
+    margin-top: 20px;
+}
+
+.myclinx-heromain-feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 11px 14px;
+
+    border-radius: 11px;
+
+    background: rgba(255,255,255,.85);
+
+    border: 1px solid rgba(225,233,242,.75);
+
+    box-shadow:
+        0 6px 18px rgba(25,65,105,.045);
+}
+
+.myclinx-heromain-feature-icon {
+
+    width: 43px;
+    height: 43px;
+
+    min-width: 43px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 9px;
+
+    color: #fff;
+
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.myclinx-heromain-feature-icon.blue {
+    background: #0870ed;
+}
+
+.myclinx-heromain-feature-icon.green {
+    background: #079b59;
+}
+
+.myclinx-heromain-feature h3 {
+
+    margin: 0;
+
+    color: #102d55;
+
+    font-size: 14px;
+
+    line-height: 1.25;
+}
+
+.myclinx-heromain-feature p {
+
+    max-width: 320px;
+
+    margin: 4px 0 0;
+
+    color: #687992;
+
+    font-size: 11px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.myclinx-heromain-actions {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 22px;
+}
+
+.myclinx-heromain-btn {
+
+    height: 43px;
+
+    padding: 0 22px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: .25s ease;
+}
+
+.myclinx-heromain-btn.primary {
+
+    background: #0969e6;
+
+    color: #fff;
+
+    box-shadow:
+        0 8px 20px rgba(9,105,230,.20);
+}
+
+.myclinx-heromain-btn.secondary {
+
+    background: #fff;
+
+    color: #0969e6;
+
+    border: 1px solid #7daeff;
+}
+
+.myclinx-heromain-btn:hover {
+
+    transform: translateY(-2px);
+}
+
+.myclinx-heromain-btn.primary:hover {
+    background: #075bc9;
+}
+
+.myclinx-heromain-btn.secondary:hover {
+    background: #f3f8ff;
+}
+
+.myclinx-heromain-btn span {
+    font-size: 18px;
+}
+
+.myclinx-heromain-btn .play {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.myclinx-heromain-trust {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    margin-top: 18px;
+}
+
+.myclinx-heromain-avatars {
+
+    display: flex;
+}
+
+.myclinx-heromain-avatars span {
+
+    width: 28px;
+    height: 28px;
+
+    display: grid;
+    place-items: center;
+
+    margin-left: -4px;
+
+    border: 2px solid #fff;
+
+    border-radius: 50%;
+
+    background: #dceaff;
+
+    color: #315780;
+
+    font-size: 7px;
+    font-weight: 700;
+}
+
+.myclinx-heromain-avatars span:nth-child(2) {
+    background: #dcefe7;
+}
+
+.myclinx-heromain-avatars span:nth-child(3) {
+    background: #f8e4d5;
+}
+
+.myclinx-heromain-trust p {
+
+    margin: 0;
+
+    color: #667890;
+
+    font-size: 10px;
+}
+
+.myclinx-heromain-trust b {
+    color: #079755;
+}
+
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.myclinx-heromain-visual {
+
+    min-width: 0;
+
+    height: 550px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Glow */
+
+.myclinx-heromain-glow {
+
+    position: absolute;
+
+    width: 470px;
+    height: 470px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(219,236,255,.95),
+            rgba(231,247,238,.4) 55%,
+            transparent 70%
+        );
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.myclinx-heromain-dashboard {
+
+    position: absolute;
+
+    left: 4%;
+
+    top: 125px;
+
+    width: 455px;
+    height: 265px;
+
+    display: grid;
+
+    grid-template-columns: 68px 1fr;
+
+    overflow: hidden;
+
+    border-radius: 13px;
+
+    background: #fff;
+
+    border: 1px solid #e2e9f1;
+
+    box-shadow:
+        0 20px 45px rgba(16,55,95,.16);
+
+    transform:
+        rotate(-1deg);
+
+    z-index: 3;
+}
+
+
+/* Dashboard sidebar */
+
+.myclinx-heromain-dashboard-side {
+
+    padding: 10px 6px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #102f53,
+            #071f3b
+        );
+}
+
+.myclinx-heromain-dashboard-logo {
+
+    margin: 0 4px 11px;
+
+    color: #fff;
+
+    font-size: 16px;
+
+    font-weight: 800;
+}
+
+.myclinx-heromain-dashboard-menu {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.myclinx-heromain-dashboard-menu a {
+
+    height: 21px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 0 4px;
+
+    border-radius: 3px;
+
+    color: #bdc9d8;
+
+    font-size: 5px;
+
+    text-decoration: none;
+}
+
+.myclinx-heromain-dashboard-menu a.active {
+
+    background: #0868e5;
+
+    color: #fff;
+}
+
+
+/* Dashboard main */
+
+.myclinx-heromain-dashboard-main {
+
+    min-width: 0;
+
+    padding: 8px;
+
+    background: #fff;
+}
+
+.myclinx-heromain-dashboard-top {
+
+    height: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.myclinx-heromain-dashboard-search {
+
+    width: 150px;
+
+    height: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 7px;
+
+    border-radius: 4px;
+
+    background: #f0f4f8;
+
+    color: #9aa7b8;
+
+    font-size: 4px;
+}
+
+.myclinx-heromain-dashboard-user {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #8492a5;
+
+    font-size: 6px;
+}
+
+.myclinx-heromain-dashboard-user i {
+
+    width: 17px;
+    height: 17px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #e4effe;
+
+    color: #166ce0;
+
+    font-size: 5px;
+
+    font-style: normal;
+}
+
+
+/* Stats */
+
+.myclinx-heromain-dashboard-stats {
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 4px;
+
+    margin-top: 7px;
+}
+
+.myclinx-heromain-dashboard-stats > div {
+
+    padding: 6px;
+
+    border: 1px solid #e8edf3;
+
+    border-radius: 5px;
+}
+
+.myclinx-heromain-dashboard-stats small {
+
+    display: block;
+
+    color: #7d8ba0;
+
+    font-size: 4px;
+}
+
+.myclinx-heromain-dashboard-stats strong {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #143158;
+
+    font-size: 10px;
+}
+
+.myclinx-heromain-dashboard-stats em {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #11945a;
+
+    font-size: 3.5px;
+
+    font-style: normal;
+}
+
+
+/* Appointment */
+
+.myclinx-heromain-dashboard-appointment {
+
+    width: 61%;
+
+    margin-top: 6px;
+
+    border: 1px solid #e8edf3;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.myclinx-heromain-panel-title {
+
+    padding: 6px;
+
+    color: #183455;
+
+    font-size: 5px;
+
+    font-weight: 700;
+}
+
+.myclinx-heromain-appointment-row {
+
+    min-height: 26px;
+
+    display: grid;
+
+    grid-template-columns: 52px 1fr 1fr 47px;
+
+    align-items: center;
+
+    padding: 0 6px;
+
+    border-top: 1px solid #f0f3f6;
+
+    color: #8592a4;
+
+    font-size: 3.5px;
+}
+
+.myclinx-heromain-appointment-row b {
+
+    color: #243c5c;
+
+    font-size: 4px;
+}
+
+.myclinx-heromain-appointment-row i {
+
+    padding: 3px 4px;
+
+    border-radius: 20px;
+
+    background: #e4f7ed;
+
+    color: #14945a;
+
+    text-align: center;
+
+    font-style: normal;
+}
+
+.myclinx-heromain-appointment-row i.waiting {
+
+    background: #fff0d7;
+
+    color: #d88816;
+}
+
+
+/* Chart */
+
+.myclinx-heromain-dashboard-chart {
+
+    position: absolute;
+
+    right: 8px;
+
+    bottom: 9px;
+
+    width: 35%;
+
+    height: 123px;
+
+    border: 1px solid #e8edf3;
+
+    border-radius: 5px;
+
+    background: #fff;
+}
+
+.myclinx-heromain-dashboard-chart svg {
+
+    width: 100%;
+
+    height: 83px;
+
+    padding: 4px 5px;
+}
+
+
+/* =========================================================
+   DASHBOARD LABEL
+========================================================= */
+
+.myclinx-heromain-label {
+
+    position: absolute;
+
+    color: #0869e4;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    font-style: italic;
+
+    z-index: 8;
+}
+
+.dashboard-label {
+
+    left: 10%;
+
+    top: 75px;
+
+    transform: rotate(-4deg);
+}
+
+.dashboard-label b {
+
+    display: block;
+
+    margin-left: 60px;
+
+    font-size: 28px;
+
+    font-weight: 400;
+
+    transform: rotate(-25deg);
+}
+
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+.myclinx-heromain-phone {
+
+    position: absolute;
+
+    right: 2%;
+
+    top: 62px;
+
+    width: 185px;
+
+    height: 385px;
+
+    padding: 7px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d5d9df,
+            #7d848c 48%,
+            #e7e9eb
+        );
+
+    box-shadow:
+        0 20px 45px rgba(30,60,90,.23);
+
+    transform:
+        rotate(4deg);
+
+    z-index: 6;
+}
+
+.myclinx-heromain-phone::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 3px;
+
+    border-radius: 27px;
+
+    border: 2px solid #3b4148;
+
+    pointer-events: none;
+}
+
+.myclinx-heromain-phone-notch {
+
+    position: absolute;
+
+    top: 11px;
+    left: 50%;
+
+    width: 75px;
+    height: 19px;
+
+    transform: translateX(-50%);
+
+    border-radius: 15px;
+
+    background: #090d12;
+
+    z-index: 5;
+}
+
+.myclinx-heromain-phone-screen {
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: #fff;
+}
+
+
+/* Phone header */
+
+.myclinx-heromain-phone-header {
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 15px 10px 0;
+
+    color: #17345a;
+
+    font-size: 8px;
+}
+
+.myclinx-heromain-clinic-logo {
+
+    width: 19px;
+    height: 19px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 5px;
+
+    background: #126ee4;
+
+    color: #fff;
+
+    font-size: 12px;
+}
+
+.myclinx-heromain-phone-header strong {
+
+    flex: 1;
+
+    font-size: 9px;
+}
+
+.myclinx-heromain-phone-header > span {
+
+    font-size: 13px;
+}
+
+
+/* Phone hero */
+
+.myclinx-heromain-phone-hero {
+
+    position: relative;
+
+    height: 260px;
+
+    padding: 20px 13px 0;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf5ff,
+            #fff
+        );
+}
+
+.myclinx-heromain-phone-hero h2 {
+
+    margin: 0;
+
+    color: #102f55;
+
+    font-size: 22px;
+
+    line-height: 1.05;
+
+    letter-spacing: -.7px;
+}
+
+.myclinx-heromain-phone-hero h2 span {
+
+    color: #079a58;
+}
+
+.myclinx-heromain-phone-hero p {
+
+    margin-top: 12px;
+
+    color: #526781;
+
+    font-size: 7px;
+
+    line-height: 1.55;
+}
+
+.myclinx-heromain-phone-hero > a {
+
+    display: inline-flex;
+
+    padding: 8px 12px;
+
+    margin-top: 10px;
+
+    border-radius: 5px;
+
+    background: #079c59;
+
+    color: #fff;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   SIMPLE DOCTOR ILLUSTRATION
+========================================================= */
+
+.myclinx-heromain-doctors {
+
+    position: absolute;
+
+    right: -4px;
+
+    bottom: -12px;
+
+    width: 150px;
+
+    height: 165px;
+}
+
+.myclinx-heromain-doctor {
+
+    position: absolute;
+
+    bottom: 0;
+}
+
+.myclinx-heromain-doctor.male {
+
+    left: 18px;
+
+    width: 73px;
+    height: 140px;
+}
+
+.myclinx-heromain-doctor.female {
+
+    right: 8px;
+
+    width: 70px;
+    height: 130px;
+}
+
+
+/* heads */
+
+.myclinx-heromain-doctor .head {
+
+    position: absolute;
+
+    top: 12px;
+    left: 20px;
+
+    width: 38px;
+    height: 46px;
+
+    border-radius: 48%;
+
+    background: #d99a76;
+
+    z-index: 2;
+}
+
+.myclinx-heromain-doctor.female .head {
+
+    background: #e0a17e;
+}
+
+
+/* hair */
+
+.myclinx-heromain-doctor .hair {
+
+    position: absolute;
+
+    top: 6px;
+    left: 16px;
+
+    width: 45px;
+    height: 25px;
+
+    border-radius: 50% 50% 35% 35%;
+
+    background: #182338;
+
+    z-index: 3;
+}
+
+.myclinx-heromain-doctor.female .hair {
+
+    left: 12px;
+
+    width: 48px;
+    height: 53px;
+
+    border-radius: 50% 50% 45% 45%;
+
+    background: #3a2825;
+}
+
+
+/* Body */
+
+.myclinx-heromain-doctor .body {
+
+    position: absolute;
+
+    left: 5px;
+    bottom: 0;
+
+    width: 65px;
+    height: 80px;
+
+    border-radius: 35px 35px 0 0;
+
+    background: #19486f;
+}
+
+
+/* Coat */
+
+.myclinx-heromain-doctor .coat {
+
+    position: absolute;
+
+    left: 10px;
+    bottom: 0;
+
+    width: 55px;
+    height: 75px;
+
+    background: #fff;
+
+    clip-path: polygon(
+        20% 0,
+        50% 20%,
+        80% 0,
+        100% 100%,
+        0 100%
+    );
+
+    z-index: 3;
+}
+
+
+/* Female coat */
+
+.myclinx-heromain-doctor.female .body {
+
+    background: #2374c8;
+}
+
+.myclinx-heromain-doctor.female .coat {
+
+    background: #fff;
+}
+
+
+/* =========================================================
+   PHONE INFO
+========================================================= */
+
+.myclinx-heromain-phone-info {
+
+    height: 42px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    border-top: 1px solid #edf1f5;
+
+    border-bottom: 1px solid #edf1f5;
+}
+
+.myclinx-heromain-phone-info div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+
+    color: #748299;
+}
+
+.myclinx-heromain-phone-info strong {
+
+    color: #183a61;
+
+    font-size: 11px;
+}
+
+.myclinx-heromain-phone-info span {
+
+    font-size: 5px;
+}
+
+
+/* Phone nav */
+
+.myclinx-heromain-phone-nav {
+
+    height: 43px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    padding-top: 5px;
+}
+
+.myclinx-heromain-phone-nav div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 3px;
+
+    color: #8b96a6;
+}
+
+.myclinx-heromain-phone-nav b {
+
+    font-size: 12px;
+}
+
+.myclinx-heromain-phone-nav span {
+
+    font-size: 5px;
+}
+
+.myclinx-heromain-phone-nav .active {
+
+    color: #086ce4;
+}
+
+
+/* Phone label */
+
+.myclinx-heromain-phone-label {
+
+    position: absolute;
+
+    right: 4%;
+
+    top: 20px;
+
+    z-index: 8;
+
+    color: #079957;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    font-style: italic;
+
+    transform: rotate(-4deg);
+}
+
+.myclinx-heromain-phone-label b {
+
+    display: block;
+
+    margin-left: 45px;
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    transform: rotate(25deg);
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.myclinx-heromain-benefits {
+
+    width: min(1180px, calc(100% - 70px));
+
+    margin: -2px auto 0;
+
+    min-height: 108px;
+
+    padding: 18px 22px;
+
+    display: grid;
+
+    grid-template-columns: repeat(6,1fr);
+
+    gap: 0;
+
+    align-items: center;
+
+    border: 1px solid #e1e9f2;
+
+    border-radius: 17px;
+
+    background: rgba(255,255,255,.92);
+
+    box-shadow:
+        0 12px 30px rgba(24,65,105,.08);
+
+    position: relative;
+
+    z-index: 20;
+}
+
+.myclinx-heromain-benefit {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 13px;
+
+    border-right: 1px solid #e5ebf2;
+}
+
+.myclinx-heromain-benefit:last-child {
+    border-right: 0;
+}
+
+.myclinx-heromain-benefit-icon {
+
+    width: 44px;
+    height: 44px;
+
+    min-width: 44px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    font-size: 23px;
+
+    font-weight: 500;
+}
+
+.myclinx-heromain-benefit-icon.blue {
+
+    background: #eaf2ff;
+
+    color: #096ce5;
+}
+
+.myclinx-heromain-benefit-icon.green {
+
+    background: #e5f7ee;
+
+    color: #079958;
+}
+
+.myclinx-heromain-benefit-icon.purple {
+
+    background: #f0eaff;
+
+    color: #7545dc;
+}
+
+.myclinx-heromain-benefit-icon.orange {
+
+    background: #fff2df;
+
+    color: #ed941c;
+}
+
+.myclinx-heromain-benefit h3 {
+
+    margin: 0;
+
+    color: #142f54;
+
+    font-size: 12px;
+
+    line-height: 1.25;
+}
+
+.myclinx-heromain-benefit p {
+
+    margin: 5px 0 0;
+
+    color: #748299;
+
+    font-size: 8px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .myclinx-heromain-container {
+
+        width: 94%;
+
+        grid-template-columns: 43% 57%;
+    }
+
+    .myclinx-heromain-title {
+
+        font-size: 42px;
+    }
+
+    .myclinx-heromain-dashboard {
+
+        width: 400px;
+
+        left: 0;
+    }
+
+    .myclinx-heromain-phone {
+
+        width: 165px;
+
+        height: 350px;
+
+        right: -1%;
+    }
+
+    .myclinx-heromain-benefits {
+
+        width: 94%;
+    }
+
+    .myclinx-heromain-benefit {
+
+        padding: 0 8px;
+
+        gap: 7px;
+    }
+
+    .myclinx-heromain-benefit-icon {
+
+        width: 38px;
+        height: 38px;
+
+        min-width: 38px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .myclinx-heromain {
+
+        padding: 32px 0 24px;
+    }
+
+    .myclinx-heromain-container {
+
+        width: calc(100% - 28px);
+
+        min-height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    /* Content */
+
+    .myclinx-heromain-content {
+
+        padding: 0;
+
+        text-align: center;
+    }
+
+    .myclinx-heromain-badge {
+
+        margin: 0 auto;
+
+        font-size: 10px;
+    }
+
+    .myclinx-heromain-title {
+
+        margin-top: 17px;
+
+        max-width: 100%;
+
+        font-size: 31px;
+
+        line-height: 1.1;
+
+        letter-spacing: -1.2px;
+    }
+
+    .myclinx-heromain-title strong {
+
+        display: inline;
+    }
+
+    .myclinx-heromain-title strong::after {
+
+        height: 3px;
+
+        bottom: -6px;
+
+        right: 25%;
+    }
+
+    .myclinx-heromain-description {
+
+        max-width: 360px;
+
+        margin: 17px auto 0;
+
+        font-size: 12px;
+
+        line-height: 1.6;
+    }
+
+
+    /* Features */
+
+    .myclinx-heromain-features {
+
+        max-width: 430px;
+
+        margin: 18px auto 0;
+
+        gap: 7px;
+
+        text-align: left;
+    }
+
+    .myclinx-heromain-feature {
+
+        padding: 9px 11px;
+
+        gap: 10px;
+    }
+
+    .myclinx-heromain-feature-icon {
+
+        width: 38px;
+        height: 38px;
+
+        min-width: 38px;
+
+        font-size: 20px;
+    }
+
+    .myclinx-heromain-feature h3 {
+
+        font-size: 12px;
+    }
+
+    .myclinx-heromain-feature p {
+
+        font-size: 9px;
+    }
+
+
+    /* Buttons */
+
+    .myclinx-heromain-actions {
+
+        justify-content: center;
+
+        margin-top: 17px;
+
+        gap: 8px;
+    }
+
+    .myclinx-heromain-btn {
+
+        height: 39px;
+
+        padding: 0 17px;
+
+        font-size: 11px;
+    }
+
+
+    /* Trust */
+
+    .myclinx-heromain-trust {
+
+        justify-content: center;
+
+        margin-top: 14px;
+    }
+
+    .myclinx-heromain-trust p {
+
+        font-size: 8px;
+    }
+
+
+    /* Visual */
+
+    .myclinx-heromain-visual {
+
+        width: 100%;
+
+        height: 410px;
+
+        margin-top: 22px;
+    }
+
+    .myclinx-heromain-glow {
+
+        width: 340px;
+        height: 340px;
+    }
+
+
+    /* Dashboard */
+
+    .myclinx-heromain-dashboard {
+
+        left: 2%;
+
+        top: 95px;
+
+        width: 285px;
+        height: 170px;
+
+        grid-template-columns: 43px 1fr;
+
+        border-radius: 9px;
+
+        transform: rotate(-2deg);
+    }
+
+    .myclinx-heromain-dashboard-side {
+
+        padding: 7px 4px;
+    }
+
+    .myclinx-heromain-dashboard-logo {
+
+        margin: 0 2px 6px;
+
+        font-size: 10px;
+    }
+
+    .myclinx-heromain-dashboard-menu {
+
+        gap: 1px;
+    }
+
+    .myclinx-heromain-dashboard-menu a {
+
+        height: 14px;
+
+        font-size: 3.3px;
+
+        gap: 2px;
+
+        padding: 0 2px;
+    }
+
+    .myclinx-heromain-dashboard-main {
+
+        padding: 5px;
+    }
+
+    .myclinx-heromain-dashboard-top {
+
+        height: 15px;
+    }
+
+    .myclinx-heromain-dashboard-search {
+
+        width: 95px;
+
+        height: 11px;
+
+        font-size: 2.7px;
+    }
+
+    .myclinx-heromain-dashboard-user {
+
+        font-size: 4px;
+    }
+
+    .myclinx-heromain-dashboard-user i {
+
+        width: 11px;
+        height: 11px;
+
+        font-size: 3px;
+    }
+
+    .myclinx-heromain-dashboard-stats {
+
+        gap: 2px;
+
+        margin-top: 4px;
+    }
+
+    .myclinx-heromain-dashboard-stats > div {
+
+        padding: 3px;
+
+        border-radius: 3px;
+    }
+
+    .myclinx-heromain-dashboard-stats small {
+
+        font-size: 2.5px;
+    }
+
+    .myclinx-heromain-dashboard-stats strong {
+
+        font-size: 6px;
+
+        margin-top: 2px;
+    }
+
+    .myclinx-heromain-dashboard-stats em {
+
+        font-size: 2px;
+
+        margin-top: 2px;
+    }
+
+    .myclinx-heromain-dashboard-appointment {
+
+        margin-top: 3px;
+    }
+
+    .myclinx-heromain-panel-title {
+
+        padding: 3px;
+
+        font-size: 3px;
+    }
+
+    .myclinx-heromain-appointment-row {
+
+        min-height: 16px;
+
+        grid-template-columns: 32px 1fr 1fr 29px;
+
+        padding: 0 3px;
+
+        font-size: 2.3px;
+    }
+
+    .myclinx-heromain-appointment-row b {
+
+        font-size: 2.6px;
+    }
+
+    .myclinx-heromain-appointment-row i {
+
+        padding: 2px;
+
+        font-size: 2.2px;
+    }
+
+    .myclinx-heromain-dashboard-chart {
+
+        bottom: 5px;
+
+        right: 5px;
+
+        height: 75px;
+    }
+
+    .myclinx-heromain-dashboard-chart svg {
+
+        height: 52px;
+    }
+
+
+    /* Labels */
+
+    .myclinx-heromain-label {
+
+        font-size: 10px;
+    }
+
+    .dashboard-label {
+
+        left: 20%;
+
+        top: 48px;
+    }
+
+    .dashboard-label b {
+
+        margin-left: 35px;
+
+        font-size: 20px;
+    }
+
+
+    /* Phone */
+
+    .myclinx-heromain-phone {
+
+        width: 137px;
+
+        height: 285px;
+
+        right: 3%;
+
+        top: 35px;
+
+        padding: 5px;
+
+        border-radius: 22px;
+
+        transform: rotate(4deg);
+    }
+
+    .myclinx-heromain-phone::before {
+
+        border-radius: 19px;
+    }
+
+    .myclinx-heromain-phone-notch {
+
+        top: 8px;
+
+        width: 53px;
+        height: 13px;
+    }
+
+    .myclinx-heromain-phone-screen {
+
+        border-radius: 18px;
+    }
+
+    .myclinx-heromain-phone-header {
+
+        height: 33px;
+
+        padding: 10px 7px 0;
+
+        gap: 4px;
+    }
+
+    .myclinx-heromain-clinic-logo {
+
+        width: 14px;
+        height: 14px;
+
+        font-size: 8px;
+    }
+
+    .myclinx-heromain-phone-header strong {
+
+        font-size: 6.5px;
+    }
+
+    .myclinx-heromain-phone-header > span {
+
+        font-size: 9px;
+    }
+
+    .myclinx-heromain-phone-hero {
+
+        height: 190px;
+
+        padding: 14px 9px 0;
+    }
+
+    .myclinx-heromain-phone-hero h2 {
+
+        font-size: 16px;
+    }
+
+    .myclinx-heromain-phone-hero p {
+
+        margin-top: 7px;
+
+        font-size: 5px;
+    }
+
+    .myclinx-heromain-phone-hero > a {
+
+        margin-top: 6px;
+
+        padding: 5px 7px;
+
+        font-size: 5px;
+    }
+
+    .myclinx-heromain-doctors {
+
+        width: 100px;
+
+        height: 110px;
+
+        right: -2px;
+    }
+
+    .myclinx-heromain-phone-info {
+
+        height: 31px;
+    }
+
+    .myclinx-heromain-phone-info strong {
+
+        font-size: 8px;
+    }
+
+    .myclinx-heromain-phone-info span {
+
+        font-size: 3.5px;
+    }
+
+    .myclinx-heromain-phone-nav {
+
+        height: 30px;
+
+        padding-top: 3px;
+    }
+
+    .myclinx-heromain-phone-nav b {
+
+        font-size: 8px;
+    }
+
+    .myclinx-heromain-phone-nav span {
+
+        font-size: 3.5px;
+    }
+
+    .myclinx-heromain-phone-label {
+
+        right: 3%;
+
+        top: 2px;
+
+        font-size: 10px;
+    }
+
+    .myclinx-heromain-phone-label b {
+
+        margin-left: 25px;
+
+        font-size: 18px;
+    }
+
+
+    /* Benefits */
+
+    .myclinx-heromain-benefits {
+
+        width: calc(100% - 28px);
+
+        margin: 0 auto;
+
+        min-height: auto;
+
+        padding: 15px 10px;
+
+        grid-template-columns: repeat(2,1fr);
+
+        gap: 0;
+
+        border-radius: 13px;
+    }
+
+    .myclinx-heromain-benefit {
+
+        min-height: 66px;
+
+        padding: 8px;
+
+        border-right: 0;
+
+        border-bottom: 1px solid #e7edf3;
+    }
+
+    .myclinx-heromain-benefit:nth-child(odd) {
+
+        border-right: 1px solid #e7edf3;
+    }
+
+    .myclinx-heromain-benefit:nth-last-child(-n+2) {
+
+        border-bottom: 0;
+    }
+
+    .myclinx-heromain-benefit-icon {
+
+        width: 34px;
+        height: 34px;
+
+        min-width: 34px;
+
+        font-size: 18px;
+    }
+
+    .myclinx-heromain-benefit h3 {
+
+        font-size: 10px;
+    }
+
+    .myclinx-heromain-benefit p {
+
+        margin-top: 3px;
+
+        font-size: 7px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .myclinx-heromain-title {
+
+        font-size: 27px;
+    }
+
+    .myclinx-heromain-description {
+
+        font-size: 11px;
+    }
+
+    .myclinx-heromain-visual {
+
+        height: 370px;
+    }
+
+    .myclinx-heromain-dashboard {
+
+        width: 250px;
+
+        height: 150px;
+    }
+
+    .myclinx-heromain-phone {
+
+        width: 122px;
+
+        height: 255px;
+    }
+
+    .myclinx-heromain-phone-hero {
+
+        height: 168px;
+    }
+
+    .myclinx-heromain-benefit {
+
+        gap: 6px;
+    }
+
+    .myclinx-heromain-benefit h3 {
+
+        font-size: 9px;
+    }
+
+    .myclinx-heromain-benefit p {
+
+        font-size: 6.5px;
+    }
+
+}
+
+
+
+
+
+/*hero section new main end*/
+
+
+
+
+
+
+/* Hero */
+ .myclinx-hero{
+    background:linear-gradient(112deg,#f7fbff 0%,#fff 62%);
+    min-height:360px;
+    padding:32px 0 22px
+}
+ .myclinx-hero-grid{
+    display:grid;
+    grid-template-columns:39% 61%;
+    align-items:center
+}
+ .myclinx-hero-copy{
+    padding-top:3px
+}
+ .myclinx-hero-copy h1{
+    font-size:32px;
+    line-height:1.12;
+    letter-spacing:-1.2px;
+    color:#0b2a58
+}
+ .myclinx-hero-copy h1 span{
+    color:#0a9b57
+}
+ .myclinx-hero-text{
+    font-size:13px;
+    line-height:1.65;
+    color:#53647e;
+    margin-top:15px
+}
+ .myclinx-hero-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:20px
+}
+ .myclinx-btn{
+    height:35px;
+    border-radius:5px;
+    padding:0 17px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    font-size:13px;
+    font-weight:600
+}
+ .myclinx-btn-blue{
+    background:#0964df;
+    color:#fff;
+    box-shadow:0 7px 15px rgba(9,100,223,.14)
+}
+ .myclinx-btn-blue span{
+    font-size:18px;
+    line-height:0
+}
+ .myclinx-btn-white{
+    border:1px solid #0a9b57;
+    color:#078b4e;
+    background:#fff;
+    gap:24px
+}
+ .myclinx-trust-row{
+    display:flex;
+    align-items:center;
+    gap:17px;
+    border-top:1px solid #e9eef5;
+    margin-top:27px;
+    padding-top:18px
+}
+ .myclinx-trust-row div{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    white-space:nowrap
+}
+ .myclinx-trust-row i{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    font-style:normal;
+    font-size:9px;
+    font-weight:700
+}
+ .myclinx-trust-row .check{
+    background:#dff5ea;
+    color:#0a9654
+}
+ .myclinx-trust-row .shield{
+    color:#0a9b57
+}
+ .myclinx-trust-row .cloud{
+    color:#2676df
+}
+ .myclinx-trust-row .support{
+    color:#236ed8
+}
+ .myclinx-trust-row span{
+    font-size:11.5px;
+    color:#52617a
+}
+/* Dashboard visual */
+ .myclinx-dashboard-wrap{
+    padding-left:15px
+}
+ .myclinx-dashboard{
+    height:304px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 12px 35px rgba(35,60,96,.13);
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:75px 1fr
+}
+ .myclinx-dashboard-sidebar{
+    background:#09203d;
+    color:#fff;
+    padding:10px 7px
+}
+ .dash-brand{
+    font-size:17px;
+    font-weight:800;
+    letter-spacing:-1px;
+    margin:0 0 10px 3px
+}
+ .dash-brand span{
+    color:#fff
+}
+ .dash-nav{
+    display:flex;
+    flex-direction:column;
+    gap:3px
+}
+ .dash-nav a{
+    font-size:6px;
+    color:#c0ccdc;
+    padding:6px 4px;
+    border-radius:4px;
+    display:flex;
+    align-items:center;
+    gap:5px;
+    white-space:nowrap
+}
+ .dash-nav a b{
+    font-size:8px;
+    width:10px;
+    text-align:center
+}
+ .dash-nav a.active{
+    background:#0864df;
+    color:#fff
+}
+ .myclinx-dashboard-main{
+    min-width:0;
+    background:#fff
+}
+ .dash-top{
+    height:35px;
+    background:#f9fbfe;
+    border-bottom:1px solid #eef2f6;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 9px
+}
+ .dash-search{
+    height:21px;
+    width:210px;
+    background:#edf2f8;
+    border-radius:4px;
+    color:#a1adbe;
+    font-size:5.5px;
+    display:flex;
+    align-items:center;
+    gap:5px;
+    padding:0 8px
+}
+ .dash-search span{
+    font-size:13px
+}
+ .dash-top-right{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    color:#748198;
+    font-size:9px
+}
+ .admin-mini{
+    width:19px;
+    height:19px;
+    background:#dfeafc;
+    color:#1264d8;
+    border-radius:50%;
+    font-size:5px;
+    font-weight:800;
+    display:grid;
+    place-items:center
+}
+ .admin-name{
+    display:flex;
+    flex-direction:column
+}
+ .admin-name strong{
+    font-size:5px;
+    color:#233552
+}
+ .admin-name small{
+    font-size:4px;
+    color:#8a95a7;
+    margin-top:2px
+}
+ .dash-title{
+    font-size:9px;
+    margin:12px 12px 8px;
+    color:#132e55
+}
+ .dash-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:5px;
+    padding:0 10px
+}
+ .dash-stats div{
+    border:1px solid #e8edf4;
+    border-radius:5px;
+    padding:8px 7px;
+    box-shadow:0 3px 8px rgba(30,55,90,.025)
+}
+ .dash-stats small{
+    display:block;
+    color:#8b97aa;
+    font-size:5px;
+    margin-bottom:4px
+}
+ .dash-stats strong{
+    display:block;
+    font-size:11px;
+    color:#122c53
+}
+ .dash-stats em{
+    font-style:normal;
+    color:#159b59;
+    font-size:4px;
+    display:block;
+    margin-top:4px
+}
+ .dash-content-grid{
+    display:grid;
+    grid-template-columns:1.35fr 1fr;
+    gap:6px;
+    padding:8px 10px
+}
+ .dash-panel{
+    border:1px solid #e9eef4;
+    border-radius:5px;
+    overflow:hidden
+}
+ .panel-head{
+    height:28px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 9px
+}
+ .panel-head strong{
+    font-size:6px
+}
+ .panel-head a{
+    font-size:4.5px;
+    color:#0964df
+}
+ .appointment-row{
+    height:25px;
+    display:grid;
+    grid-template-columns:48px 1fr 52px 42px;
+    align-items:center;
+    padding:0 9px;
+    border-top:1px solid #f0f3f7
+}
+ .appointment-row time,.appointment-row span,.appointment-row b{
+    font-size:4.7px
+}
+ .appointment-row time,.appointment-row span{
+    color:#75839a
+}
+ .appointment-row label{
+    font-size:4px;
+    padding:3px 4px;
+    border-radius:10px;
+    background:#e6f7ee;
+    color:#14985a;
+    text-align:center
+}
+ .appointment-row label.wait{
+    background:#fff4db;
+    color:#c88916
+}
+ .chart-legend{
+    display:flex;
+    gap:9px;
+    padding:0 9px 5px;
+    color:#8290a4;
+    font-size:4.5px
+}
+ .chart-legend span{
+    display:flex;
+    align-items:center;
+    gap:3px
+}
+ .chart-legend i{
+    width:4px;
+    height:4px;
+    border-radius:50%;
+    background:#2075e7
+}
+ .chart-legend span:last-child i{
+    background:#a6b0c0
+}
+ .fake-chart{
+    height:108px;
+    margin:0 7px;
+    position:relative;
+    padding-bottom:16px
+}
+ .chart-grid{
+    position:absolute;
+    inset:0 0 17px;
+    background:repeating-linear-gradient(to bottom,transparent 0,transparent 19px,#edf1f5 20px)
+}
+ .fake-chart svg{
+    position:absolute;
+    left:4px;
+    right:4px;
+    top:0;
+    width:calc(100% - 8px);
+    height:88px
+}
+ .chart-labels{
+    position:absolute;
+    left:5px;
+    right:5px;
+    bottom:0;
+    display:flex;
+    justify-content:space-between;
+    color:#8491a5;
+    font-size:4.5px
+}
+/* Trusted */
+ .myclinx-trusted{
+    background:#fff;
+    border-top:1px solid #f0f3f7;
+    padding:11px 0 16px
+}
+ .trusted-title{
+    text-align:center;
+    font-size:16px;
+    font-weight:700;
+    color:#0d2a55;
+    margin-bottom:10px
+}
+ .trusted-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    align-items:center
+}
+ .trusted-item{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    border-right:1px solid #edf0f4;
+    min-height:35px
+}
+ .trusted-item:last-child{
+    border-right:0
+}
+ .trusted-icon{
+    font-size:22px;
+    color:#2476e6;
+    font-weight:400
+}
+ .trusted-icon.green{
+    color:#0a9d59
+}
+ .trusted-item div{
+    display:flex;
+    flex-direction:column
+}
+ .trusted-item strong{
+    font-size:16px;
+    letter-spacing:-.5px;
+    color:#0d2b56
+}
+ .trusted-item small{
+    font-size:8px;
+    color:#61718a;
+    margin-top:2px
+}
+/* Extra page sections */
+ .dummy-section{
+    padding:100px 0;
+    border-top:1px solid #edf1f6
+}
+ .dummy-section span{
+    font-size:11px;
+    font-weight:700;
+    color:#0b9957
+}
+ .dummy-section h2{
+    font-size:34px;
+    margin-top:10px
+}
+/* Responsive */
+ @media(max-width:1100px){
+     .myclinx-container{
+        width:min(94%,1340px)
+    }
+     .myclinx-navigation{
+        gap:18px
+    }
+     .myclinx-hero-grid{
+        grid-template-columns:38% 62%
+    }
+     .myclinx-hero-copy h1{
+        font-size:28px
+    }
+     .myclinx-trust-row{
+        gap:9px
+    }
+     .myclinx-dashboard-wrap{
+        padding-left:8px
+    }
+}
+ @media(max-width:850px){
+     .myclinx-header{
+        height:62px
+    }
+     .myclinx-navigation{
+        position:absolute;
+        left:0;
+        right:0;
+        top:62px;
+        height:auto;
+        background:#fff;
+        border-bottom:1px solid #e7edf5;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:8px 22px;
+        box-shadow:0 12px 25px rgba(20,45,80,.08)
+    }
+     .myclinx-navigation.open{
+        display:flex
+    }
+     .myclinx-navigation a{
+        height:40px
+    }
+     .myclinx-navigation a.active:after{
+        display:none
+    }
+     .myclinx-nav-actions{
+        margin-left:auto;
+        margin-right:10px
+    }
+     .myclinx-menu{
+        display:flex;
+        width:34px;
+        height:34px;
+        border:1px solid #dce4ef;
+        background:#fff;
+        border-radius:6px;
+        flex-direction:column;
+        justify-content:center;
+        gap:4px;
+        padding:0 8px
+    }
+     .myclinx-menu span{
+        height:2px;
+        background:#0c2b55;
+        border-radius:2px
+    }
+     .myclinx-logo{
+        width:145px
+    }
+     .myclinx-hero{
+        padding:35px 0
+    }
+     .myclinx-hero-grid{
+        grid-template-columns:1fr;
+        gap:30px
+    }
+     .myclinx-hero-copy{
+        text-align:center
+    }
+     .myclinx-hero-buttons,.myclinx-trust-row{
+        justify-content:center
+    }
+     .myclinx-dashboard-wrap{
+        padding:0
+    }
+}
+ @media(max-width:600px){
+     .myclinx-container{
+        width:calc(100% - 30px)
+    }
+     .myclinx-logo-word{
+        font-size:25px
+    }
+     .myclinx-logo-sub{
+        font-size:4.5px
+    }
+     .myclinx-login{
+        display:none
+    }
+     .myclinx-start{
+        height:30px;
+        padding:0 11px;
+        font-size:8px
+    }
+     .myclinx-menu{
+        order:3;
+        margin-left:8px
+    }
+     .myclinx-hero{
+        padding:30px 0 22px
+    }
+     .myclinx-hero-copy h1{
+        font-size:31px;
+        line-height:1.1
+    }
+     .myclinx-hero-text{
+        font-size:13px
+    }
+     .desktop-only{
+        display:none
+    }
+     .myclinx-hero-buttons{
+        gap:8px
+    }
+     .myclinx-btn{
+        height:38px;
+        padding:0 13px
+    }
+     .myclinx-trust-row{
+        flex-wrap:wrap;
+        gap:9px 14px;
+        margin-top:22px;
+        padding-top:15px
+    }
+     .myclinx-trust-row span{
+        font-size:7px
+    }
+     .myclinx-dashboard{
+        height:285px;
+        grid-template-columns:67px 1fr;
+        border-radius:11px
+    }
+     .myclinx-dashboard-sidebar{
+        padding:9px 5px
+    }
+     .dash-brand{
+        font-size:15px
+    }
+     .dash-nav a{
+        font-size:5.5px;
+        padding:6px 3px
+    }
+     .dash-top{
+        padding:0 6px
+    }
+     .dash-search{
+        width:145px
+    }
+     .dash-top-right{
+        gap:3px
+    }
+     .admin-name{
+        display:none
+    }
+     .dash-title{
+        margin:9px 8px 6px
+    }
+     .dash-stats{
+        gap:3px;
+        padding:0 6px
+    }
+     .dash-stats div{
+        padding:6px 5px
+    }
+     .dash-stats strong{
+        font-size:8px
+    }
+     .dash-content-grid{
+        gap:3px;
+        padding:5px 6px
+    }
+     .appointment-row{
+        grid-template-columns:43px 1fr 35px 31px;
+        padding:0 5px
+    }
+     .appointment-row time,.appointment-row span,.appointment-row b{
+        font-size:3.7px
+    }
+     .appointment-row label{
+        font-size:3.2px
+    }
+     .panel-head{
+        padding:0 6px
+    }
+     .chart-legend{
+        padding-left:6px
+    }
+     .fake-chart{
+        height:100px
+    }
+     .trusted-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:4px
+    }
+     .trusted-item{
+        border-right:0;
+        border-bottom:1px solid #edf0f4;
+        justify-content:flex-start;
+        padding:7px 8px
+    }
+     .trusted-item:nth-child(5){
+        grid-column:1/-1;
+        justify-content:center;
+        border-bottom:0
+    }
+     .trusted-icon{
+        font-size:18px
+    }
+     .trusted-item strong{
+        font-size:14px
+    }
+     .trusted-item small{
+        font-size:7px
+    }
+     .dummy-section{
+        padding:65px 0
+    }
+     .dummy-section h2{
+        font-size:27px
+    }
+}
+ @media(max-width:390px){
+     .myclinx-logo{
+        width:130px
+    }
+     .myclinx-start{
+        display:none
+    }
+     .myclinx-hero-copy h1{
+        font-size:27px
+    }
+     .myclinx-dashboard{
+        height:260px;
+        grid-template-columns:61px 1fr
+    }
+     .dash-nav a{
+        font-size:4.8px
+    }
+     .dash-stats small{
+        font-size:4px
+    }
+     .dash-stats strong{
+        font-size:7px
+    }
+     .appointment-row{
+        grid-template-columns:38px 1fr 28px 26px
+    }
+}
+ .myclinx-features{
+     width:100%;
+     padding:18px 0 9px;
+     background: radial-gradient(circle at 15% 30%,rgba(241,247,255,.55),transparent 35%), #fff;
+}
+ .myclinx-features-container{
+     width:min(1170px,calc(100% - 70px));
+     margin:auto;
+}
+ .myclinx-section-heading{
+     text-align:center;
+     margin-bottom:18px;
+}
+ .myclinx-section-heading > span{
+     display:block;
+     color:var(--myclinx-green);
+     font-size:9px;
+     font-weight:800;
+     letter-spacing:.4px;
+     margin-bottom:3px;
+}
+ .myclinx-section-heading h2{
+     color:var(--myclinx-navy);
+     font-size:21px;
+     line-height:1.2;
+     font-weight:800;
+     letter-spacing:-.6px;
+}
+ .myclinx-section-heading p{
+     color:#61708a;
+     font-size:11px;
+     margin-top:5px;
+}
+ .myclinx-feature-grid{
+     display:grid;
+     grid-template-columns:repeat(4,1fr);
+     gap:10px 12px;
+}
+ .myclinx-feature-card{
+     min-height:85px;
+     border:1px solid var(--myclinx-border);
+     border-radius:9px;
+     background:rgba(255,255,255,.94);
+     display:flex;
+     align-items:center;
+     gap:15px;
+     padding:12px 14px;
+     transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+ .myclinx-feature-card:hover{
+     transform:translateY(-3px);
+     border-color:#cfdceb;
+     box-shadow:0 10px 25px rgba(20,55,100,.08);
+}
+ .myclinx-feature-icon{
+     width:36px;
+     min-width:36px;
+     height:42px;
+     display:flex;
+     align-items:center;
+     justify-content:center;
+}
+ .myclinx-feature-icon svg{
+     width:34px;
+     height:38px;
+     fill:none;
+     stroke:currentColor;
+     stroke-width:1.8;
+     stroke-linecap:round;
+     stroke-linejoin:round;
+}
+ .myclinx-feature-icon.blue{
+     color:#1267e8;
+}
+ .myclinx-feature-icon.green{
+     color:#0a9b58;
+}
+ .myclinx-feature-content{
+     min-width:0;
+}
+ .myclinx-feature-content h3{
+     color:#102a54;
+     font-size:13px;
+     font-weight:700;
+     line-height:1.25;
+     margin-bottom:7px;
+}
+ .myclinx-feature-content p{
+     color:#64728a;
+     font-size:11.8px;
+     line-height:1.7;
+     max-width:175px;
+}
+/* Tablet */
+ @media(max-width:900px){
+     .myclinx-features-container{
+         width:min(94%,700px);
+    }
+     .myclinx-feature-grid{
+         grid-template-columns:repeat(2,1fr);
+         gap:12px;
+    }
+     .myclinx-feature-card{
+         min-height:95px;
+    }
+}
+/* Mobile */
+ @media(max-width:600px){
+     .myclinx-features{
+         padding:35px 0 25px;
+    }
+     .myclinx-features-container{
+         width:calc(100% - 28px);
+    }
+     .myclinx-section-heading{
+         margin-bottom:22px;
+    }
+     .myclinx-section-heading > span{
+         font-size:9px;
+    }
+     .myclinx-section-heading h2{
+         font-size:23px;
+    }
+     .myclinx-section-heading p{
+         font-size:9px;
+         line-height:1.5;
+         padding:0 10px;
+    }
+     .myclinx-feature-grid{
+         grid-template-columns:1fr;
+         gap:10px;
+    }
+     .myclinx-feature-card{
+         min-height:92px;
+         padding:14px 16px;
+         gap:16px;
+    }
+     .myclinx-feature-icon{
+         width:42px;
+         min-width:42px;
+         height:45px;
+    }
+     .myclinx-feature-icon svg{
+         width:38px;
+         height:42px;
+    }
+     .myclinx-feature-content h3{
+         font-size:11px;
+         margin-bottom:5px;
+    }
+     .myclinx-feature-content p{
+         max-width:none;
+         font-size:9px;
+         line-height:1.55;
+    }
+}
+/* Small phones */
+ @media(max-width:380px){
+     .myclinx-section-heading h2{
+         font-size:20px;
+    }
+     .myclinx-feature-card{
+         min-height:88px;
+    }
+}
+/*madx role start*/
+/* ========================================= myclinx ROLE MODULE ========================================= */
+ .myclinxrole-section {
+     width: 100%;
+     padding: 28px 0 25px;
+     background: #ffffff;
+}
+ .myclinxrole-container {
+     width: min(1100px, calc(100% - 70px));
+     margin: 0 auto;
+}
+/* ========================================= HEADING ========================================= */
+ .myclinxrole-heading {
+     text-align: center;
+     margin-bottom: 16px;
+}
+ .myclinxrole-heading span {
+     display: block;
+     color: #0a9856;
+     font-size: 8px;
+     font-weight: 800;
+     letter-spacing: .5px;
+     margin-bottom: 3px;
+}
+ .myclinxrole-heading h2 {
+     margin: 0;
+     color: #092653;
+     font-size: 20px;
+     line-height: 1.2;
+     font-weight: 800;
+     letter-spacing: -.7px;
+}
+/* ========================================= GRID ========================================= */
+ .myclinxrole-grid {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 18px;
+}
+/* ========================================= CARD ========================================= */
+ .myclinxrole-card {
+     min-height: 177px;
+     position: relative;
+     overflow: hidden;
+     border-radius: 9px;
+     border: 1px solid #dfe7f1;
+     padding: 14px 14px;
+     background: #f8faff;
+     transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+ .myclinxrole-card:hover {
+     transform: translateY(-4px);
+     border-color: #cbd8e8;
+     box-shadow: 0 12px 30px rgba(15, 48, 88, .10);
+}
+/* Different card backgrounds */
+ .myclinxrole-doctor {
+     background: linear-gradient( 135deg, #f7f9ff 0%, #eef4ff 100% );
+}
+ .myclinxrole-receptionist {
+     background: linear-gradient( 135deg, #f8fcfa 0%, #eff9f3 100% );
+}
+ .myclinxrole-owner {
+     background: linear-gradient( 135deg, #f7faff 0%, #eef5ff 100% );
+}
+ .myclinxrole-patient {
+     background: linear-gradient( 135deg, #f8fcfa 0%, #eef9f4 100% );
+}
+/* ========================================= CONTENT ========================================= */
+ .myclinxrole-card-content {
+     position: relative;
+     z-index: 3;
+}
+ .myclinxrole-card-content h3 {
+     margin: 0 0 5px;
+     color: #0866df;
+     font-size: 13px;
+     line-height: 1.2;
+     font-weight: 700;
+}
+ .myclinxrole-receptionist .myclinxrole-card-content h3, .myclinxrole-patient .myclinxrole-card-content h3 {
+     color: #078d50;
+}
+ .myclinxrole-card-content p {
+     margin: 0;
+     color: #1b365d;
+     font-size: 11px;
+     line-height: 1.45;
+}
+/* ========================================= LIST ========================================= */
+ .myclinxrole-card-content ul {
+     list-style: none;
+     margin: 12px 0 0;
+     padding: 0;
+}
+ .myclinxrole-card-content li {
+     position: relative;
+     margin-bottom: 5px;
+     padding-left: 13px;
+     color: #243c5d;
+     font-size: 11px;
+     line-height: 1.25;
+}
+ .myclinxrole-card-content li::before {
+     content: "✓";
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 8px;
+     height: 8px;
+     display: grid;
+     place-items: center;
+     border-radius: 50%;
+     background: #e2ebf8;
+     color: #195fae;
+     font-size: 5px;
+     font-weight: 800;
+}
+ .myclinxrole-receptionist .myclinxrole-card-content li::before, .myclinxrole-patient .myclinxrole-card-content li::before {
+     background: #e1f3e9;
+     color: #16834f;
+}
+/* ========================================= ILLUSTRATION ========================================= */
+ .myclinxrole-illustration {
+     position: absolute;
+     z-index: 1;
+     right: -4px;
+     bottom: -5px;
+     width: 105px;
+     height: 115px;
+     pointer-events: none;
+}
+ .myclinxrole-illustration svg {
+     width: 100%;
+     height: 100%;
+     display: block;
+}
+/* Doctor */
+ .myclinxrole-doctor-img {
+     width: 110px;
+     height: 115px;
+     right: -4px;
+     bottom: -4px;
+}
+/* Receptionist */
+ .myclinxrole-reception-img {
+     width: 112px;
+     height: 116px;
+     right: -3px;
+     bottom: -5px;
+}
+/* Owner */
+ .myclinxrole-owner-img {
+     width: 111px;
+     height: 116px;
+     right: -4px;
+     bottom: -5px;
+}
+/* Patient */
+ .myclinxrole-patient-img {
+     width: 110px;
+     height: 117px;
+     right: -4px;
+     bottom: -5px;
+}
+/* ========================================= TABLET ========================================= */
+ @media (max-width: 1000px) {
+     .myclinxrole-container {
+         width: min(94%, 760px);
+    }
+     .myclinxrole-grid {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 14px;
+    }
+     .myclinxrole-card {
+         height: 190px;
+    }
+     .myclinxrole-illustration {
+         width: 125px;
+         height: 125px;
+    }
+}
+/* ========================================= MOBILE ========================================= */
+ @media (max-width: 600px) {
+     .myclinxrole-section {
+         padding: 40px 0 30px;
+    }
+     .myclinxrole-container {
+         width: calc(100% - 28px);
+    }
+     .myclinxrole-heading {
+         margin-bottom: 23px;
+    }
+     .myclinxrole-heading span {
+         font-size: 9px;
+    }
+     .myclinxrole-heading h2 {
+         font-size: 24px;
+    }
+     .myclinxrole-grid {
+         grid-template-columns: 1fr;
+         gap: 12px;
+    }
+     .myclinxrole-card {
+         min-height: 199px;
+         padding: 18px;
+    }
+     .myclinxrole-card-content h3 {
+         font-size: 14px;
+    }
+     .myclinxrole-card-content p {
+         font-size: 9px;
+    }
+     .myclinxrole-card-content ul {
+         margin-top: 14px;
+    }
+     .myclinxrole-card-content li {
+         margin-bottom: 7px;
+         padding-left: 15px;
+         font-size: 8px;
+    }
+     .myclinxrole-card-content li::before {
+         width: 9px;
+         height: 9px;
+         font-size: 6px;
+    }
+     .myclinxrole-illustration {
+         width: 145px;
+         height: 145px;
+         right: -5px;
+         bottom: -8px;
+    }
+}
+/* ========================================= SMALL MOBILE ========================================= */
+ @media (max-width: 380px) {
+     .myclinxrole-heading h2 {
+         font-size: 21px;
+    }
+     .myclinxrole-card {
+         height: 180px;
+    }
+     .myclinxrole-illustration {
+         width: 125px;
+         height: 130px;
+    }
+     .myclinxrole-card-content li {
+         font-size: 7.5px;
+    }
+}
+/*madex role end*/
+/* ========================================= myclinx REAL-TIME OVERVIEW ========================================= */
+ .myclinxoverview {
+     width: 100%;
+     padding: 32px 0 28px;
+     background: radial-gradient( circle at 75% 50%, #edf6ff 0%, transparent 48% ), linear-gradient( 110deg, #f8fbff 0%, #ffffff 72% );
+     overflow: hidden;
+}
+ .myclinxoverview-container {
+     width: min(1110px, calc(100% - 70px));
+     margin: auto;
+     min-height: 300px;
+     display: grid;
+     grid-template-columns: 24% 76%;
+     align-items: center;
+}
+/* ========================================= LEFT CONTENT ========================================= */
+ .myclinxoverview-copy {
+     padding-left: 5px;
+}
+ .myclinxoverview-eyebrow {
+     display: block;
+     color: #079553;
+     font-size: 8px;
+     font-weight: 800;
+     letter-spacing: .4px;
+     margin-bottom: 11px;
+}
+ .myclinxoverview-copy h2 {
+     margin: 0;
+     color: #092653;
+     font-size: 21px;
+     line-height: 1.18;
+     letter-spacing: -.8px;
+     font-weight: 800;
+}
+ .myclinxoverview-copy p {
+     max-width: 190px;
+     color: #60718a;
+     font-size: 9px;
+     line-height: 1.6;
+     margin-top: 15px;
+}
+ .myclinxoverview-btn {
+     width: 140px;
+     height: 30px;
+     margin-top: 18px;
+     padding: 0 12px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     border-radius: 4px;
+     background: #0965df;
+     color: #fff;
+     font-size: 8px;
+     font-weight: 600;
+     box-shadow: 0 7px 16px rgba(9,101,223,.18);
+     transition: .2s ease;
+}
+ .myclinxoverview-btn:hover {
+     background: #0758c4;
+     transform: translateY(-2px);
+}
+ .myclinxoverview-btn span {
+     font-size: 17px;
+     line-height: 0;
+}
+/* ========================================= DASHBOARD ========================================= */
+ .myclinxoverview-dashboard {
+     width: 100%;
+}
+ .myclinxdash {
+     width: 100%;
+     height: 295px;
+     display: grid;
+     grid-template-columns: 82px 1fr;
+     overflow: hidden;
+     background: #fff;
+     border: 1px solid #e7edf4;
+     border-radius: 13px;
+     box-shadow: 0 12px 35px rgba(26,56,94,.13);
+}
+/* ========================================= SIDEBAR ========================================= */
+ .myclinxdash-sidebar {
+     background: linear-gradient( 180deg, #102f53, #071f3b );
+     color: #fff;
+     padding: 10px 7px;
+}
+ .myclinxdash-logo {
+     font-size: 18px;
+     font-weight: 800;
+     letter-spacing: -1px;
+     margin: 1px 4px 12px;
+}
+ .myclinxdash-logo span {
+     color: #fff;
+}
+ .myclinxdash-menu {
+     display: flex;
+     flex-direction: column;
+     gap: 3px;
+}
+ .myclinxdash-menu a {
+     height: 24px;
+     display: flex;
+     align-items: center;
+     gap: 5px;
+     padding: 0 5px;
+     border-radius: 4px;
+     color: #b8c6d8;
+     font-size: 6px;
+     transition: .2s ease;
+}
+ .myclinxdash-menu a i {
+     width: 10px;
+     text-align: center;
+     font-style: normal;
+     font-size: 8px;
+}
+ .myclinxdash-menu a.active {
+     color: #fff;
+     background: #0865df;
+}
+ .myclinxdash-menu a:hover {
+     color: #fff;
+     background: rgba(255,255,255,.08);
+}
+/* ========================================= DASHBOARD MAIN ========================================= */
+ .myclinxdash-main {
+     min-width: 0;
+     background: #fff;
+}
+/* TOPBAR */
+ .myclinxdash-topbar {
+     height: 36px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 10px;
+     background: #fafbfd;
+     border-bottom: 1px solid #edf1f5;
+}
+ .myclinxdash-search {
+     width: 215px;
+     height: 19px;
+     display: flex;
+     align-items: center;
+     gap: 5px;
+     padding: 0 8px;
+     border-radius: 4px;
+     background: #eef2f7;
+     color: #9aa7b8;
+     font-size: 5.5px;
+}
+ .myclinxdash-search span {
+     font-size: 10px;
+}
+ .myclinxdash-admin {
+     display: flex;
+     align-items: center;
+     gap: 7px;
+}
+ .myclinxdash-notification {
+     color: #687990;
+     font-size: 9px;
+}
+ .myclinxdash-avatar {
+     width: 19px;
+     height: 19px;
+     display: grid;
+     place-items: center;
+     border-radius: 50%;
+     background: #e2edfc;
+     color: #1769df;
+     font-size: 5px;
+     font-weight: 800;
+}
+ .myclinxdash-admin-info {
+     display: flex;
+     flex-direction: column;
+}
+ .myclinxdash-admin-info strong {
+     color: #223958;
+     font-size: 5px;
+}
+ .myclinxdash-admin-info small {
+     color: #8794a7;
+     font-size: 4px;
+     margin-top: 1px;
+}
+/* ========================================= STATS ========================================= */
+ .myclinxdash-stats {
+     display: grid;
+     grid-template-columns: repeat(4,1fr);
+     gap: 6px;
+     padding: 10px 10px 5px;
+}
+ .myclinxdash-stat {
+     min-width: 0;
+     padding: 8px;
+     border: 1px solid #e7edf4;
+     border-radius: 5px;
+     box-shadow: 0 2px 7px rgba(30,60,100,.025);
+}
+ .myclinxdash-stat small {
+     display: block;
+     color: #78869a;
+     font-size: 5px;
+     margin-bottom: 4px;
+}
+ .myclinxdash-stat strong {
+     display: block;
+     color: #102d55;
+     font-size: 12px;
+     line-height: 1;
+}
+ .myclinxdash-stat em {
+     display: block;
+     color: #13975a;
+     font-size: 4px;
+     font-style: normal;
+     margin-top: 5px;
+}
+/* ========================================= CONTENT GRID ========================================= */
+ .myclinxdash-content {
+     display: grid;
+     grid-template-columns: minmax(0, 1.6fr) minmax(90px, .8fr) minmax(120px, 1fr);
+     gap: 6px;
+     padding: 5px 10px 10px;
+}
+ .myclinxdash-panel {
+     min-width: 0;
+     border: 1px solid #e7edf4;
+     border-radius: 5px;
+     background: #fff;
+     overflow: hidden;
+}
+/* ========================================= CHART ========================================= */
+ .myclinxdash-panel-title {
+     height: 28px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 9px;
+}
+ .myclinxdash-panel-title strong {
+     font-size: 6px;
+     color: #193456;
+}
+ .myclinxdash-panel-title span {
+     color: #8290a2;
+     font-size: 4px;
+     white-space: nowrap;
+}
+ .myclinxdash-panel-title i {
+     display: inline-block;
+     width: 4px;
+     height: 4px;
+     border-radius: 50%;
+     background: #176fe5;
+     margin-right: 2px;
+}
+ .myclinxdash-panel-title .gray-dot {
+     background: #aab4c2;
+     margin-left: 5px;
+}
+ .myclinxdash-chart {
+     position: relative;
+     height: 130px;
+     margin: 0 8px;
+}
+ .chart-lines {
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 10px;
+     bottom: 23px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+ .chart-lines span {
+     width: 100%;
+     height: 1px;
+     background: #edf1f5;
+}
+ .myclinxdash-chart svg {
+     position: absolute;
+     left: 2px;
+     right: 2px;
+     top: 5px;
+     width: calc(100% - 4px);
+     height: 100px;
+}
+ .chart-days {
+     position: absolute;
+     left: 3px;
+     right: 3px;
+     bottom: 2px;
+     display: flex;
+     justify-content: space-between;
+     color: #7c899b;
+     font-size: 4.5px;
+}
+/* ========================================= GENDER ========================================= */
+ .gender-panel {
+     padding: 10px;
+}
+ .gender-panel > strong {
+     display: block;
+     color: #193456;
+     font-size: 6px;
+}
+ .gender-content {
+     height: 125px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 8px;
+}
+ .gender-chart {
+     width: 65px;
+     height: 65px;
+     display: grid;
+     place-items: center;
+     border-radius: 50%;
+     background: conic-gradient( #176fe5 0 62%, #0b9b59 62% 100% );
+}
+ .gender-chart div {
+     width: 38px;
+     height: 38px;
+     border-radius: 50%;
+     background: #fff;
+}
+ .gender-info {
+     display: flex;
+     flex-direction: column;
+}
+ .gender-info strong {
+     font-size: 9px;
+     color: #203858;
+}
+ .gender-info small {
+     font-size: 4.5px;
+     color: #7d8a9c;
+     margin-bottom: 5px;
+}
+ .gender-info .female {
+     color: #0b9957;
+}
+/* ========================================= RECENT PATIENTS ========================================= */
+ .patients-heading {
+     height: 28px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 8px;
+}
+ .patients-heading strong {
+     font-size: 6px;
+}
+ .patients-heading a {
+     color: #1769df;
+     font-size: 4.5px;
+}
+ .patient-row {
+     min-height: 25px;
+     display: flex;
+     align-items: center;
+     gap: 6px;
+     padding: 3px 8px;
+     border-top: 1px solid #f0f3f6;
+}
+ .patient-avatar {
+     width: 16px;
+     height: 16px;
+     flex-shrink: 0;
+     display: grid;
+     place-items: center;
+     border-radius: 50%;
+     font-size: 4px;
+     font-weight: 700;
+}
+ .patient-avatar.blue {
+     background: #e2edfc;
+     color: #1769df;
+}
+ .patient-avatar.pink {
+     background: #fbe8ef;
+     color: #d45480;
+}
+ .patient-avatar.yellow {
+     background: #fff0d6;
+     color: #d28a19;
+}
+ .patient-avatar.green {
+     background: #e3f7eb;
+     color: #15975a;
+}
+ .patient-row > div:last-child {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+ .patient-row strong {
+     color: #263c5b;
+     font-size: 5px;
+}
+ .patient-row small {
+     color: #8793a5;
+     font-size: 4px;
+}
+/* ========================================= TABLET ========================================= */
+ @media (max-width: 1000px) {
+     .myclinxoverview-container {
+         width: 94%;
+         grid-template-columns: 28% 72%;
+    }
+     .myclinxoverview-copy h2 {
+         font-size: 19px;
+    }
+     .myclinxdash {
+         height: 285px;
+    }
+}
+/* ========================================= MOBILE ========================================= */
+ @media (max-width: 700px) {
+     .myclinxoverview {
+         padding: 40px 0 30px;
+    }
+     .myclinxoverview-container {
+         width: calc(100% - 28px);
+         display: flex;
+         flex-direction: column;
+         gap: 28px;
+    }
+     .myclinxoverview-copy {
+         text-align: center;
+         padding: 0;
+    }
+     .myclinxoverview-eyebrow {
+         font-size: 9px;
+    }
+     .myclinxoverview-copy h2 {
+         font-size: 27px;
+    }
+     .myclinxoverview-copy p {
+         max-width: 320px;
+         margin: 13px auto 0;
+         font-size: 10px;
+    }
+     .myclinxoverview-btn {
+         width: 155px;
+         height: 37px;
+         margin: 17px auto 0;
+         font-size: 9px;
+    }
+    /* Dashboard horizontal scroll */
+     .myclinxoverview-dashboard {
+         width: 100%;
+         overflow-x: auto;
+         overflow-y: hidden;
+         scrollbar-width: none;
+    }
+     .myclinxoverview-dashboard::-webkit-scrollbar {
+         display: none;
+    }
+     .myclinxdash {
+         width: 760px;
+         min-width: 760px;
+         height: 285px;
+    }
+}
+/* ========================================= SMALL MOBILE ========================================= */
+ @media (max-width: 390px) {
+     .myclinxoverview-copy h2 {
+         font-size: 24px;
+    }
+     .myclinxoverview-copy p {
+         font-size: 9px;
+    }
+     .myclinxdash {
+         transform: scale(.92);
+         transform-origin: left top;
+         margin-bottom: -22px;
+    }
+}
+/*madx overview end*/
+/* ========================================= myclinx HOW IT WORKS ========================================= */
+ .myclinxworks {
+     width: 100%;
+     padding: 20px 0 18px;
+     background: radial-gradient( circle at 50% 30%, rgba(242,248,255,.7), transparent 48% ), #fff;
+     overflow: hidden;
+}
+ .myclinxworks-container {
+     width: min(1100px, calc(100% - 60px));
+     margin: auto;
+}
+/* ========================================= HEADING ========================================= */
+ .myclinxworks-heading {
+     text-align: center;
+     margin-bottom: 8px;
+}
+ .myclinxworks-heading span {
+     display: block;
+     color: #079652;
+     font-size: 8px;
+     font-weight: 800;
+     letter-spacing: .4px;
+     margin-bottom: 3px;
+}
+ .myclinxworks-heading h2 {
+     margin: 0;
+     color: #092653;
+     font-size: 18px;
+     line-height: 1.2;
+     letter-spacing: -.6px;
+     font-weight: 800;
+}
+/* ========================================= STEPS ========================================= */
+ .myclinxworks-steps {
+     width: 100%;
+     display: grid;
+     grid-template-columns: 1fr 70px 1fr 70px 1fr 70px 1fr;
+     align-items: start;
+}
+/* ========================================= STEP ========================================= */
+ .myclinxworks-step {
+     text-align: center;
+     min-width: 0;
+}
+ .myclinxworks-step-top {
+     position: relative;
+     height: 72px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+/* Number */
+ .myclinxworks-number {
+     position: absolute;
+     top: 4px;
+     left: 7px;
+     width: 28px;
+     height: 28px;
+     display: grid;
+     place-items: center;
+     border-radius: 50%;
+     background: #1268df;
+     color: #fff;
+     font-size: 8px;
+     font-weight: 700;
+     z-index: 5;
+}
+ .myclinxworks-number.green {
+     background: #079653;
+}
+/* Icon circle */
+ .myclinxworks-icon {
+     width: 74px;
+     height: 74px;
+     display: grid;
+     place-items: center;
+     border-radius: 50%;
+     border: 1px solid #9ab9ed;
+     color: #1268df;
+     background: rgba(255,255,255,.65);
+}
+ .myclinxworks-icon.green-icon {
+     border-color: #9dd5bb;
+     color: #079653;
+}
+ .myclinxworks-icon svg {
+     width: 48px;
+     height: 48px;
+}
+/* Step text */
+ .myclinxworks-step-content {
+     margin-top: 7px;
+}
+ .myclinxworks-step-content h3 {
+     margin: 0;
+     color: #102c54;
+     font-size: 9px;
+     line-height: 1.35;
+     font-weight: 700;
+}
+ .myclinxworks-step-content p {
+     margin: 5px 0 0;
+     color: #65738a;
+     font-size: 7px;
+     line-height: 1.5;
+}
+/* ========================================= CONNECTORS ========================================= */
+ .myclinxworks-connector {
+     height: 72px;
+     display: flex;
+     align-items: center;
+     padding-top: 1px;
+}
+ .myclinxworks-connector span {
+     display: block;
+     flex: 1;
+     height: 1px;
+     background: repeating-linear-gradient( to right, #b4cdef 0, #b4cdef 3px, transparent 3px, transparent 6px );
+}
+ .myclinxworks-connector b {
+     width: 20px;
+     color: #1769df;
+     font-size: 18px;
+     font-weight: 400;
+     line-height: 1;
+}
+ .green-connector b {
+     color: #079653;
+}
+ .green-connector span {
+     background: repeating-linear-gradient( to right, #9dd3ba 0, #9dd3ba 3px, transparent 3px, transparent 6px );
+}
+/* ========================================= CTA ========================================= */
+ .myclinxworks-cta {
+     position: relative;
+     min-height: 90px;
+     margin-top: 20px;
+     padding: 18px 50px;
+     display: flex;
+     align-items: center;
+     border-radius: 11px;
+     overflow: hidden;
+     background: linear-gradient( 100deg, #075bcf 0%, #087ac7 34%, #079d57 100% );
+     box-shadow: 0 8px 20px rgba(10,70,130,.10);
+}
+/* CTA Content */
+ .myclinxworks-cta-content {
+     position: relative;
+     z-index: 3;
+     flex: 1;
+}
+ .myclinxworks-cta-content h2 {
+     margin: 0;
+     color: #fff;
+     font-size: 18px;
+     line-height: 1.2;
+     letter-spacing: -.5px;
+     font-weight: 700;
+}
+ .myclinxworks-cta-content p {
+     margin-top: 6px;
+     color: rgba(255,255,255,.92);
+     font-size: 8px;
+     line-height: 1.45;
+}
+/* ========================================= CTA BUTTONS ========================================= */
+ .myclinxworks-cta-buttons {
+     position: relative;
+     z-index: 5;
+     display: flex;
+     gap: 12px;
+     margin-right: 105px;
+}
+ .myclinxworks-btn {
+     width: 101px;
+     height: 31px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 4px;
+     font-size: 8px;
+     font-weight: 600;
+     transition: .2s ease;
+}
+ .myclinxworks-btn.white {
+     color: #0964db;
+     background: #fff;
+     box-shadow: 0 5px 12px rgba(0,0,0,.12);
+}
+ .myclinxworks-btn.outline {
+     color: #fff;
+     border: 1px solid rgba(255,255,255,.75);
+     background: rgba(255,255,255,.02);
+}
+ .myclinxworks-btn:hover {
+     transform: translateY(-2px);
+}
+/* ========================================= ROCKET ========================================= */
+ .myclinxworks-rocket {
+     position: absolute;
+     right: 18px;
+     bottom: -3px;
+     width: 105px;
+     height: 105px;
+     z-index: 2;
+     transform: rotate(3deg);
+}
+ .myclinxworks-rocket svg {
+     width: 100%;
+     height: 100%;
+}
+/* ========================================= TABLET ========================================= */
+ @media (max-width: 900px) {
+     .myclinxworks-container {
+         width: 94%;
+    }
+     .myclinxworks-steps {
+         grid-template-columns: 1fr 35px 1fr 35px 1fr 35px 1fr;
+    }
+     .myclinxworks-icon {
+         width: 65px;
+         height: 65px;
+    }
+     .myclinxworks-icon svg {
+         width: 43px;
+         height: 43px;
+    }
+     .myclinxworks-number {
+         width: 25px;
+         height: 25px;
+         left: 0;
+    }
+     .myclinxworks-connector {
+         height: 65px;
+    }
+     .myclinxworks-cta {
+         padding-left: 30px;
+         padding-right: 25px;
+    }
+     .myclinxworks-cta-buttons {
+         margin-right: 80px;
+    }
+}
+/* ========================================= MOBILE ========================================= */
+ @media (max-width: 650px) {
+     .myclinxworks {
+         padding: 40px 0 30px;
+    }
+     .myclinxworks-container {
+         width: calc(100% - 28px);
+    }
+     .myclinxworks-heading {
+         margin-bottom: 30px;
+    }
+     .myclinxworks-heading span {
+         font-size: 9px;
+    }
+     .myclinxworks-heading h2 {
+         font-size: 24px;
+    }
+    /* Vertical Steps */
+     .myclinxworks-steps {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 0;
+    }
+     .myclinxworks-step {
+         width: 100%;
+         min-height: 145px;
+         display: flex;
+         align-items: center;
+         text-align: left;
+         padding-left: 18px;
+    }
+     .myclinxworks-step-top {
+         width: 100px;
+         min-width: 100px;
+         height: 100px;
+    }
+     .myclinxworks-icon {
+         width: 82px;
+         height: 82px;
+    }
+     .myclinxworks-icon svg {
+         width: 53px;
+         height: 53px;
+    }
+     .myclinxworks-number {
+         top: 0;
+         left: 0;
+         width: 30px;
+         height: 30px;
+         font-size: 9px;
+    }
+     .myclinxworks-step-content {
+         margin: 0 0 0 15px;
+    }
+     .myclinxworks-step-content h3 {
+         font-size: 13px;
+    }
+     .myclinxworks-step-content p {
+         font-size: 9px;
+         line-height: 1.55;
+    }
+    /* Hide horizontal connectors */
+     .myclinxworks-connector {
+         display: none;
+    }
+    /* CTA */
+     .myclinxworks-cta {
+         min-height: 250px;
+         margin-top: 25px;
+         padding: 25px 22px;
+         display: block;
+         text-align: center;
+    }
+     .myclinxworks-cta-content h2 {
+         font-size: 21px;
+    }
+     .myclinxworks-cta-content p {
+         font-size: 9px;
+         line-height: 1.6;
+    }
+     .myclinxworks-cta-buttons {
+         margin: 20px 0 0;
+         justify-content: center;
+         gap: 8px;
+    }
+     .myclinxworks-btn {
+         width: 115px;
+         height: 36px;
+         font-size: 9px;
+    }
+     .myclinxworks-rocket {
+         width: 95px;
+         height: 95px;
+         right: 50%;
+         transform: translateX(50%) rotate(3deg);
+         bottom: -5px;
+         opacity: .9;
+    }
+}
+/* ========================================= SMALL MOBILE ========================================= */
+ @media (max-width: 380px) {
+     .myclinxworks-heading h2 {
+         font-size: 21px;
+    }
+     .myclinxworks-step {
+         padding-left: 5px;
+    }
+     .myclinxworks-step-top {
+         width: 88px;
+         min-width: 88px;
+    }
+     .myclinxworks-icon {
+         width: 72px;
+         height: 72px;
+    }
+     .myclinxworks-icon svg {
+         width: 47px;
+         height: 47px;
+    }
+     .myclinxworks-step-content h3 {
+         font-size: 12px;
+    }
+     .myclinxworks-step-content p {
+         font-size: 8px;
+    }
+     .myclinxworks-cta-content h2 {
+         font-size: 19px;
+    }
+}
+/* ========================================= myclinx FOOTER ========================================= */
+ .myclinx-footer {
+     width: 100%;
+     background: radial-gradient( circle at 15% 20%, rgba(18, 73, 132, .28), transparent 32% ), linear-gradient( 110deg, #06234a 0%, #031d40 55%, #021b3b 100% );
+     color: #fff;
+     position: relative;
+     overflow: hidden;
+}
+/* Subtle top glow */
+ .myclinx-footer::before {
+     content: "";
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 0;
+     height: 1px;
+     background: rgba(255,255,255,.12);
+}
+/* ========================================= CONTAINER ========================================= */
+ .myclinx-footer-container {
+     width: min(1100px, calc(100% - 70px));
+     margin: 0 auto;
+}
+/* ========================================= TOP ========================================= */
+ .myclinx-footer-top {
+     min-height: 160px;
+     padding: 25px 0 22px;
+     display: grid;
+     grid-template-columns: 1.8fr .9fr .9fr .9fr;
+     column-gap: 55px;
+}
+/* ========================================= BRAND ========================================= */
+ .myclinx-footer-brand {
+     max-width: 245px;
+}
+/* Logo */
+ .myclinx-footer-logo {
+     display: inline-flex;
+     flex-direction: column;
+     color: #fff;
+     text-decoration: none;
+}
+ .myclinx-logo-main {
+     font-size: 27px;
+     line-height: .9;
+     letter-spacing: -1.8px;
+     font-weight: 800;
+}
+ .myclinx-logo-main span {
+     position: relative;
+}
+/* Green X accent */
+ .myclinx-logo-main span::before {
+     content: "";
+     position: absolute;
+     width: 5px;
+     height: 5px;
+     border-radius: 50%;
+     background: #16a66b;
+     left: 7px;
+     top: -5px;
+}
+ .myclinx-footer-logo small {
+     margin-top: 4px;
+     font-size: 4px;
+     letter-spacing: .65px;
+     font-weight: 600;
+     color: #c1d0e2;
+}
+/* Description */
+ .myclinx-footer-brand > p {
+     margin: 13px 0 11px;
+     max-width: 220px;
+     color: #c4d0df;
+     font-size: 8px;
+     line-height: 1.55;
+}
+/* ========================================= SOCIAL ========================================= */
+ .myclinx-social {
+     display: flex;
+     align-items: center;
+     gap: 7px;
+}
+ .myclinx-social a {
+     width: 20px;
+     height: 20px;
+     display: grid;
+     place-items: center;
+     border: 1px solid rgba(255,255,255,.55);
+     border-radius: 50%;
+     color: #fff;
+     transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+ .myclinx-social a:hover {
+     background: #0a68d9;
+     border-color: #0a68d9;
+     transform: translateY(-2px);
+}
+ .myclinx-social svg {
+     width: 9px;
+     height: 9px;
+     fill: currentColor;
+}
+ .myclinx-social a:nth-child(5) svg {
+     fill: none;
+     stroke: currentColor;
+     stroke-width: 1.6;
+}
+/* ========================================= FOOTER COLUMNS ========================================= */
+ .myclinx-footer-column {
+     padding-top: 2px;
+}
+ .myclinx-footer-column h3 {
+     margin: 0 0 12px;
+     color: #fff;
+     font-size: 9px;
+     line-height: 1;
+     font-weight: 700;
+}
+ .myclinx-footer-column ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+ .myclinx-footer-column li {
+     margin-bottom: 8px;
+}
+ .myclinx-footer-column a {
+     color: #c4d0df;
+     font-size: 7.5px;
+     text-decoration: none;
+     transition: color .2s ease, padding-left .2s ease;
+}
+ .myclinx-footer-column a:hover {
+     color: #fff;
+     padding-left: 3px;
+}
+/* ========================================= BOTTOM ========================================= */
+ .myclinx-footer-bottom {
+     min-height: 38px;
+     border-top: 1px solid rgba(255,255,255,.15);
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+ .myclinx-footer-bottom p {
+     margin: 0;
+     color: #c1ccda;
+     font-size: 7px;
+}
+ .myclinx-made-with span {
+     color: #ff5b5b;
+     font-size: 10px;
+     margin: 0 2px;
+}
+/* ========================================= TABLET ========================================= */
+ @media (max-width: 900px) {
+     .myclinx-footer-container {
+         width: 94%;
+    }
+     .myclinx-footer-top {
+         grid-template-columns: 1.6fr 1fr 1fr 1fr;
+         column-gap: 25px;
+    }
+     .myclinx-footer-brand {
+         max-width: 210px;
+    }
+}
+/* ========================================= MOBILE ========================================= */
+ @media (max-width: 650px) {
+     .myclinx-footer {
+         margin-top: 0;
+    }
+     .myclinx-footer-container {
+         width: calc(100% - 30px);
+    }
+     .myclinx-footer-top {
+         padding: 35px 0 25px;
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 30px 25px;
+    }
+    /* Brand full width */
+     .myclinx-footer-brand {
+         grid-column: 1 / -1;
+         max-width: 100%;
+         text-align: center;
+    }
+     .myclinx-footer-logo {
+         align-items: center;
+    }
+     .myclinx-logo-main {
+         font-size: 31px;
+    }
+     .myclinx-footer-logo small {
+         font-size: 5px;
+    }
+     .myclinx-footer-brand > p {
+         max-width: 310px;
+         margin: 14px auto;
+         font-size: 9px;
+         line-height: 1.6;
+    }
+     .myclinx-social {
+         justify-content: center;
+         gap: 9px;
+    }
+     .myclinx-social a {
+         width: 28px;
+         height: 28px;
+    }
+     .myclinx-social svg {
+         width: 11px;
+         height: 11px;
+    }
+    /* Columns */
+     .myclinx-footer-column {
+         padding: 0;
+    }
+     .myclinx-footer-column h3 {
+         font-size: 11px;
+         margin-bottom: 13px;
+    }
+     .myclinx-footer-column li {
+         margin-bottom: 9px;
+    }
+     .myclinx-footer-column a {
+         font-size: 9px;
+    }
+    /* Bottom */
+     .myclinx-footer-bottom {
+         min-height: auto;
+         padding: 17px 0;
+         flex-direction: column;
+         gap: 9px;
+         text-align: center;
+    }
+     .myclinx-footer-bottom p {
+         font-size: 8px;
+    }
+}
+/* ========================================= SMALL MOBILE ========================================= */
+ @media (max-width: 380px) {
+     .myclinx-footer-container {
+         width: calc(100% - 24px);
+    }
+     .myclinx-footer-top {
+         gap: 27px 18px;
+    }
+     .myclinx-footer-brand > p {
+         font-size: 8px;
+    }
+     .myclinx-footer-column h3 {
+         font-size: 10px;
+    }
+     .myclinx-footer-column a {
+         font-size: 8px;
+    }
+}
+
+
+
+
+/*********************************for Font start*************************************/
+/* =========================================================
+   myclinx GLOBAL TYPOGRAPHY FIX
+   Paste this at the END of your CSS
+========================================================= */
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+body {
+    padding-top: 64px;
+}
+
+
+/* =========================================================
+   HEADER / NAVIGATION
+========================================================= */
+
+.myclinx-navigation a {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.myclinx-login,
+.myclinx-start {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.myclinx-hero-copy h1 {
+    font-size: 42px;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+}
+
+.myclinx-hero-text {
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.myclinx-btn {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   TRUST ROW
+========================================================= */
+
+.myclinx-trust-row span {
+    font-size: 12px;
+}
+
+.myclinx-trust-row i {
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   TRUSTED CLINICS
+========================================================= */
+
+.trusted-title {
+    font-size: 18px;
+}
+
+.trusted-item strong {
+    font-size: 18px;
+}
+
+.trusted-item small {
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   FEATURES SECTION
+========================================================= */
+
+.myclinx-section-heading > span {
+    font-size: 10px;
+}
+
+.myclinx-section-heading h2 {
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.myclinx-section-heading p {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.myclinx-feature-content h3 {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.myclinx-feature-content p {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   myclinx ROLE MODULE
+========================================================= */
+
+.myclinxrole-heading span {
+    font-size: 10px;
+}
+
+.myclinxrole-heading h2 {
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.myclinxrole-card-content h3 {
+    font-size: 15px;
+    line-height: 1.25;
+}
+
+.myclinxrole-card-content p {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.myclinxrole-card-content li {
+    font-size: 12px;
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   REAL-TIME OVERVIEW
+========================================================= */
+
+.myclinxoverview-eyebrow {
+    font-size: 10px;
+}
+
+.myclinxoverview-copy h2 {
+    font-size: 30px;
+    line-height: 1.18;
+}
+
+.myclinxoverview-copy p {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.myclinxoverview-btn {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.myclinxworks-heading span {
+    font-size: 10px;
+}
+
+.myclinxworks-heading h2 {
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.myclinxworks-step-content h3 {
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+.myclinxworks-step-content p {
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.myclinxworks-number {
+    font-size: 10px;
+}
+
+.myclinxworks-cta-content h2 {
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.myclinxworks-cta-content p {
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.myclinxworks-btn {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.myclinx-footer-logo small {
+    font-size: 6px;
+}
+
+.myclinx-footer-brand > p {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.myclinx-footer-column h3 {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.myclinx-footer-column a {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.myclinx-footer-bottom p {
+    font-size: 11px;
+}
+
+.myclinx-made-with span {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .myclinx-hero-copy h1 {
+        font-size: 38px;
+    }
+
+    .myclinx-section-heading h2,
+    .myclinxrole-heading h2,
+    .myclinxworks-heading h2 {
+        font-size: 28px;
+    }
+
+    .myclinxoverview-copy h2 {
+        font-size: 27px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Hero */
+
+    .myclinx-hero-copy h1 {
+        font-size: 32px;
+        line-height: 1.12;
+        letter-spacing: -1px;
+    }
+
+    .myclinx-hero-text {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+
+    /* Trust */
+
+    .myclinx-trust-row span {
+        font-size: 10px;
+    }
+
+
+    /* Section heading */
+
+    .myclinx-section-heading > span,
+    .myclinxrole-heading span,
+    .myclinxworks-heading span,
+    .myclinxoverview-eyebrow {
+        font-size: 10px;
+    }
+
+    .myclinx-section-heading h2,
+    .myclinxrole-heading h2,
+    .myclinxworks-heading h2 {
+        font-size: 24px;
+    }
+
+
+    /* Features */
+
+    .myclinx-feature-content h3 {
+        font-size: 14px;
+    }
+
+    .myclinx-feature-content p {
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+
+    /* Roles */
+
+    .myclinxrole-card-content h3 {
+        font-size: 15px;
+    }
+
+    .myclinxrole-card-content p {
+        font-size: 12px;
+    }
+
+    .myclinxrole-card-content li {
+        font-size: 11.5px;
+        line-height: 1.4;
+    }
+
+
+    /* Overview */
+
+    .myclinxoverview-copy h2 {
+        font-size: 28px;
+    }
+
+    .myclinxoverview-copy p {
+        font-size: 13px;
+    }
+
+    .myclinxoverview-btn {
+        font-size: 12px;
+    }
+
+
+    /* How it works */
+
+    .myclinxworks-step-content h3 {
+        font-size: 15px;
+    }
+
+    .myclinxworks-step-content p {
+        font-size: 12px;
+    }
+
+    .myclinxworks-cta-content h2 {
+        font-size: 23px;
+    }
+
+    .myclinxworks-cta-content p {
+        font-size: 12px;
+    }
+
+    .myclinxworks-btn {
+        font-size: 12px;
+    }
+
+
+    /* Footer */
+
+    .myclinx-footer-brand > p {
+        font-size: 12px;
+    }
+
+    .myclinx-footer-column h3 {
+        font-size: 14px;
+    }
+
+    .myclinx-footer-column a {
+        font-size: 12px;
+    }
+
+    .myclinx-footer-bottom p {
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .myclinx-hero-copy h1 {
+        font-size: 29px;
+    }
+
+    .myclinx-section-heading h2,
+    .myclinxrole-heading h2,
+    .myclinxworks-heading h2 {
+        font-size: 22px;
+    }
+
+    .myclinxoverview-copy h2 {
+        font-size: 25px;
+    }
+
+    .myclinxrole-card-content h3 {
+        font-size: 14px;
+    }
+
+    .myclinxrole-card-content p,
+    .myclinxrole-card-content li {
+        font-size: 11px;
+    }
+
+    .myclinxworks-step-content h3 {
+        font-size: 14px;
+    }
+
+    .myclinxworks-step-content p {
+        font-size: 11px;
+    }
+
+    .myclinxworks-cta-content h2 {
+        font-size: 21px;
+    }
+
+    .myclinxworks-cta-content p {
+        font-size: 11px;
+    }
+
+    .myclinx-footer-brand > p {
+        font-size: 11px;
+    }
+
+    .myclinx-footer-column h3 {
+        font-size: 13px;
+    }
+
+    .myclinx-footer-column a {
+        font-size: 11px;
+    }
+}
+/**********************************For font End************************************/
+
+
+/*about us start*/
+/* =========================================
+   MYCLINX ABOUT PAGE
+========================================= */
+
+.myclinx-about-container {
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.myclinx-about-hero {
+    padding: 110px 0 100px;
+    background: #f8fbff;
+}
+
+.myclinx-about-hero-content {
+    max-width: 850px;
+}
+
+.myclinx-about-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: #2563eb;
+}
+
+.myclinx-about-title {
+    margin: 0 0 28px;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: #111827;
+}
+
+.myclinx-about-title span {
+    display: block;
+    color: #2563eb;
+}
+
+.myclinx-about-lead {
+    max-width: 780px;
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #5b6472;
+}
+
+
+/* =========================================
+   ABOUT SECTIONS
+========================================= */
+
+.myclinx-about-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.myclinx-about-light {
+    background: #f8fbff;
+}
+
+.myclinx-about-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 90px;
+    align-items: start;
+}
+
+.myclinx-about-grid.myclinx-about-reverse {
+    grid-template-columns: 1.2fr 0.8fr;
+}
+
+.myclinx-about-grid.myclinx-about-reverse
+.myclinx-about-heading {
+    order: 2;
+}
+
+.myclinx-about-grid.myclinx-about-reverse
+.myclinx-about-content {
+    order: 1;
+}
+
+.myclinx-about-heading h2 {
+    margin: 0;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    color: #111827;
+}
+
+.myclinx-about-heading h2 span {
+    display: block;
+    color: #2563eb;
+}
+
+.myclinx-about-content {
+    padding-top: 5px;
+}
+
+.myclinx-about-content p,
+.myclinx-about-centered p {
+    margin: 0 0 22px;
+    font-size: 17px;
+    line-height: 1.85;
+    color: #5b6472;
+}
+
+.myclinx-about-content p:last-child,
+.myclinx-about-centered p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   CENTER CONTENT
+========================================= */
+
+.myclinx-about-centered {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.myclinx-about-centered h2 {
+    margin: 0 auto 28px;
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -1.4px;
+    color: #111827;
+}
+
+.myclinx-about-centered h2 span {
+    display: block;
+    color: #2563eb;
+}
+
+.myclinx-about-centered p {
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================
+   VISION
+========================================= */
+
+.myclinx-about-vision {
+    background: #eef5ff;
+}
+
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.myclinx-about-cta {
+    padding: 100px 0;
+    background: #111827;
+}
+
+.myclinx-about-cta-content {
+    max-width: 850px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.myclinx-about-cta .myclinx-about-eyebrow {
+    color: #60a5fa;
+}
+
+.myclinx-about-cta h2 {
+    margin: 0 0 25px;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: #ffffff;
+}
+
+.myclinx-about-cta h2 span {
+    display: block;
+    color: #60a5fa;
+}
+
+.myclinx-about-cta p {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .myclinx-about-hero {
+        padding: 80px 0;
+    }
+
+    .myclinx-about-section {
+        padding: 75px 0;
+    }
+
+    .myclinx-about-grid,
+    .myclinx-about-grid.myclinx-about-reverse {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .myclinx-about-grid.myclinx-about-reverse
+    .myclinx-about-heading {
+        order: 1;
+    }
+
+    .myclinx-about-grid.myclinx-about-reverse
+    .myclinx-about-content {
+        order: 2;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .myclinx-about-container {
+        width: 88%;
+    }
+
+    .myclinx-about-hero {
+        padding: 65px 0;
+    }
+
+    .myclinx-about-section {
+        padding: 60px 0;
+    }
+
+    .myclinx-about-title {
+        letter-spacing: -1px;
+    }
+
+    .myclinx-about-lead {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .myclinx-about-content p,
+    .myclinx-about-centered p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .myclinx-about-cta {
+        padding: 70px 0;
+    }
+
+}
+
+
+
+/*about us end*/
+
+
+/*price page start*/
+/* =========================================
+   MYCLINX PRICING PAGE
+========================================= */
+
+.myclinx-pricing-container {
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   PRICING HERO
+========================================= */
+
+.myclinx-pricing-hero {
+    padding: 100px 0 80px;
+    background: #f8fbff;
+}
+
+.myclinx-pricing-hero-content {
+    max-width: 850px;
+}
+
+.myclinx-pricing-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    color: #2563eb;
+}
+
+.myclinx-pricing-hero h1 {
+    margin: 0 0 25px;
+    font-size: clamp(42px, 5vw, 66px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+    color: #111827;
+}
+
+.myclinx-pricing-hero h1 span {
+    display: block;
+    color: #2563eb;
+}
+
+.myclinx-pricing-hero p {
+    max-width: 760px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #5b6472;
+}
+
+
+/* =========================================
+   PRICING CARDS
+========================================= */
+
+.myclinx-pricing-plans {
+    padding: 90px 0;
+    background: #ffffff;
+}
+
+.myclinx-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    align-items: stretch;
+}
+
+.myclinx-price-card {
+    position: relative;
+    padding: 30px 25px;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 15px 45px rgba(15, 23, 42, 0.07);
+}
+
+.myclinx-price-featured {
+    border: 2px solid #2563eb;
+    box-shadow: 0 20px 55px rgba(37, 99, 235, 0.14);
+}
+
+.myclinx-price-popular {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 7px 13px;
+    border-radius: 30px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.myclinx-price-icon {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.myclinx-price-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #64748b;
+}
+
+.myclinx-price-card h2 {
+    margin: 0 0 8px;
+    font-size: 40px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.myclinx-price-card h3 {
+    margin: 0 0 25px;
+    font-size: 19px;
+    line-height: 1.45;
+    color: #334155;
+}
+
+.myclinx-price-card h3 span {
+    display: block;
+    color: #64748b;
+}
+
+.myclinx-price-amount {
+    margin-bottom: 15px;
+    font-size: 42px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.myclinx-price-amount small {
+    font-size: 15px;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.myclinx-price-intro {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #64748b;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.myclinx-price-features {
+    margin-top: 35px;
+    padding-top: 30px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.myclinx-price-features h4,
+.myclinx-price-rules h4 {
+    margin: 0 0 18px;
+    font-size: 17px;
+    color: #111827;
+}
+
+.myclinx-price-features ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.myclinx-price-features li {
+    padding: 9px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #475569;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+
+/* =========================================
+   USAGE BOX
+========================================= */
+
+.myclinx-price-usage,
+.myclinx-price-unlimited {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 18px;
+    background: #eff6ff;
+}
+
+.myclinx-price-usage > span,
+.myclinx-price-unlimited > span {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    color: #2563eb;
+}
+
+.myclinx-price-usage h4,
+.myclinx-price-unlimited h4 {
+    margin: 10px 0;
+    font-size: 32px;
+    color: #111827;
+}
+
+.myclinx-price-usage h4 small,
+.myclinx-price-unlimited h4 small {
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.myclinx-price-usage > p,
+.myclinx-price-unlimited > p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #475569;
+}
+
+.myclinx-price-example {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #dbeafe;
+}
+
+.myclinx-price-example strong {
+    font-size: 14px;
+    color: #111827;
+}
+
+.myclinx-price-example p {
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: #475569;
+}
+
+
+/* =========================================
+   RULES
+========================================= */
+
+.myclinx-price-rules {
+    margin-top: 30px;
+}
+
+.myclinx-price-rules p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #475569;
+}
+
+.myclinx-price-rules strong {
+    color: #111827;
+}
+
+
+/* =========================================
+   BEST FOR
+========================================= */
+
+.myclinx-price-best {
+    margin-top: 28px;
+    padding: 20px;
+    border-left: 3px solid #2563eb;
+    background: #f8fafc;
+}
+
+.myclinx-price-best strong {
+    font-size: 14px;
+    color: #111827;
+}
+
+.myclinx-price-best p {
+    margin: 6px 0 0;
+    font-size: 14px;
+    line-height: 1.65;
+    color: #64748b;
+}
+
+
+/* =========================================
+   PLAN BUTTON
+========================================= */
+
+.myclinx-price-button {
+    display: block;
+    margin-top: 30px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    background: #111827;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.myclinx-price-button:hover {
+    background: #2563eb;
+}
+
+.myclinx-price-featured .myclinx-price-button {
+    background: #2563eb;
+}
+
+.myclinx-price-featured .myclinx-price-button:hover {
+    background: #111827;
+}
+
+
+/* =========================================
+   COMPARISON
+========================================= */
+
+.myclinx-price-comparison {
+    padding: 100px 0;
+    background: #f8fbff;
+}
+
+.myclinx-price-section-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.myclinx-price-section-heading h2 {
+    margin: 0 0 18px;
+    font-size: clamp(34px, 4vw, 50px);
+    line-height: 1.15;
+    color: #111827;
+}
+
+.myclinx-price-section-heading h2 span {
+    color: #2563eb;
+}
+
+.myclinx-price-section-heading p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #64748b;
+}
+
+.myclinx-comparison-wrapper {
+    overflow-x: auto;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(15, 23, 42, 0.07);
+}
+
+.myclinx-comparison-table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+.myclinx-comparison-table th,
+.myclinx-comparison-table td {
+    padding: 17px 20px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.myclinx-comparison-table th {
+    background: #111827;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.myclinx-comparison-table th:not(:first-child),
+.myclinx-comparison-table td:not(:first-child) {
+    text-align: center;
+}
+
+.myclinx-comparison-table td {
+    font-size: 14px;
+    color: #475569;
+}
+
+.myclinx-comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.myclinx-comparison-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.myclinx-price-how {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.myclinx-price-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.myclinx-price-step {
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    background: #ffffff;
+}
+
+.myclinx-price-step > span {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 800;
+    color: #2563eb;
+}
+
+.myclinx-price-step h3 {
+    margin: 0 0 12px;
+    font-size: 20px;
+    color: #111827;
+}
+
+.myclinx-price-step p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #64748b;
+}
+
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.myclinx-price-cta {
+    padding: 100px 0;
+    background: #111827;
+}
+
+.myclinx-price-cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.myclinx-price-cta .myclinx-pricing-eyebrow {
+    color: #60a5fa;
+}
+
+.myclinx-price-cta h2 {
+    margin: 0 0 22px;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.12;
+    color: #ffffff;
+}
+
+.myclinx-price-cta h2 span {
+    display: block;
+    color: #60a5fa;
+}
+
+.myclinx-price-cta p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+.myclinx-price-cta-button {
+    display: inline-block;
+    padding: 15px 28px;
+    border-radius: 12px;
+    background: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.myclinx-price-cta-button:hover {
+    background: #ffffff;
+    color: #111827;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .myclinx-pricing-hero {
+        padding: 75px 0 65px;
+    }
+
+    .myclinx-pricing-plans {
+        padding: 70px 0;
+    }
+
+    .myclinx-pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .myclinx-price-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .myclinx-price-comparison,
+    .myclinx-price-how,
+    .myclinx-price-cta {
+        padding: 75px 0;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .myclinx-pricing-container {
+        width: 90%;
+    }
+
+    .myclinx-pricing-hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .myclinx-pricing-hero p {
+        font-size: 16px;
+    }
+
+    .myclinx-price-card {
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .myclinx-price-popular {
+        position: static;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .myclinx-price-card h2 {
+        font-size: 34px;
+    }
+
+    .myclinx-price-amount {
+        font-size: 36px;
+    }
+
+    .myclinx-price-features li {
+        font-size: 13px;
+    }
+
+    .myclinx-price-section-heading {
+        margin-bottom: 35px;
+    }
+
+    .myclinx-price-comparison {
+        padding: 65px 0;
+    }
+
+}
+
+
+
+
+@media (max-width: 1050px) and (min-width: 901px) {
+
+    .myclinx-pricing-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .myclinx-price-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 550px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}
+
+/*price page end*/
+
+/*contact page start*/
+/* =========================================
+   MYCLINX CONTACT PAGE
+========================================= */
+
+.myclinx-contact-container {
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   CONTACT HERO
+========================================= */
+
+.myclinx-contact-hero {
+    padding: 100px 0 85px;
+    background: #f8fbff;
+}
+
+.myclinx-contact-hero-content {
+    max-width: 820px;
+}
+
+.myclinx-contact-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    color: #2563eb;
+}
+
+.myclinx-contact-hero h1 {
+    margin: 0 0 25px;
+    font-size: clamp(42px, 5vw, 66px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+    color: #111827;
+}
+
+.myclinx-contact-hero h1 span {
+    display: block;
+    color: #2563eb;
+}
+
+.myclinx-contact-hero p {
+    max-width: 760px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #5b6472;
+}
+
+
+/* =========================================
+   CONTACT MAIN
+========================================= */
+
+.myclinx-contact-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.myclinx-contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.myclinx-contact-info h2 {
+    margin: 0 0 25px;
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+    color: #111827;
+}
+
+.myclinx-contact-info h2 span {
+    display: block;
+    color: #2563eb;
+}
+
+.myclinx-contact-info > p {
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #64748b;
+}
+
+
+/* =========================================
+   CONTACT DETAILS
+========================================= */
+
+.myclinx-contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 25px;
+    padding: 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    background: #ffffff;
+}
+
+.myclinx-contact-detail-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: #eff6ff;
+    font-size: 20px;
+}
+
+.myclinx-contact-detail small {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #64748b;
+}
+
+.myclinx-contact-detail a {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.myclinx-contact-detail a:hover {
+    color: #2563eb;
+}
+
+.myclinx-contact-detail p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+}
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+.myclinx-contact-form-box {
+    padding: 38px;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 20px 55px rgba(15, 23, 42, 0.08);
+}
+
+.myclinx-contact-form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    color: #2563eb;
+}
+
+.myclinx-contact-form-box h3 {
+    margin: 0 0 30px;
+    font-size: 30px;
+    line-height: 1.2;
+    color: #111827;
+}
+
+.myclinx-contact-form-box h3 span {
+    color: #2563eb;
+}
+
+.myclinx-contact-field {
+    margin-bottom: 20px;
+}
+
+.myclinx-contact-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #334155;
+}
+
+.myclinx-contact-field input,
+.myclinx-contact-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border: 1px solid #dbe2ea;
+    border-radius: 10px;
+    outline: none;
+    background: #f8fafc;
+    color: #111827;
+    font-family: inherit;
+    font-size: 15px;
+    transition: 0.25s ease;
+}
+
+.myclinx-contact-field input {
+    height: 50px;
+}
+
+.myclinx-contact-field textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.myclinx-contact-field input:focus,
+.myclinx-contact-field textarea:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.myclinx-contact-field input::placeholder,
+.myclinx-contact-field textarea::placeholder {
+    color: #94a3b8;
+}
+
+.myclinx-contact-submit {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 11px;
+    background: #2563eb;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.myclinx-contact-submit:hover {
+    background: #111827;
+}
+
+
+/* =========================================
+   BOTTOM CTA
+========================================= */
+
+.myclinx-contact-bottom {
+    padding: 100px 0;
+    background: #f8fbff;
+}
+
+.myclinx-contact-bottom-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.myclinx-contact-bottom-content h2 {
+    margin: 0 0 22px;
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1.15;
+    letter-spacing: -1.3px;
+    color: #111827;
+}
+
+.myclinx-contact-bottom-content h2 span {
+    display: block;
+    color: #2563eb;
+}
+
+.myclinx-contact-bottom-content > p {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #64748b;
+}
+
+.myclinx-contact-actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.myclinx-contact-action-primary,
+.myclinx-contact-action-secondary {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.myclinx-contact-action-primary {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.myclinx-contact-action-primary:hover {
+    background: #111827;
+}
+
+.myclinx-contact-action-secondary {
+    border: 1px solid #dbe2ea;
+    background: #ffffff;
+    color: #111827;
+}
+
+.myclinx-contact-action-secondary:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .myclinx-contact-hero {
+        padding: 75px 0 65px;
+    }
+
+    .myclinx-contact-section {
+        padding: 75px 0;
+    }
+
+    .myclinx-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .myclinx-contact-bottom {
+        padding: 75px 0;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .myclinx-contact-container {
+        width: 90%;
+    }
+
+    .myclinx-contact-hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .myclinx-contact-hero p {
+        font-size: 16px;
+    }
+
+    .myclinx-contact-info > p {
+        font-size: 15px;
+    }
+
+    .myclinx-contact-form-box {
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .myclinx-contact-form-box h3 {
+        font-size: 26px;
+    }
+
+    .myclinx-contact-actions {
+        flex-direction: column;
+    }
+
+    .myclinx-contact-action-primary,
+    .myclinx-contact-action-secondary {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+}
+/*contact page end*/

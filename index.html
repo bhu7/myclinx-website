@@ -35,14 +35,60 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Official MyClinx logo */
+    .myclinx-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .myclinx-logo-img {
+      display: block;
+      width: 190px;
+      height: auto;
+      max-width: 100%;
+    }
+
+    .myclinx-heromain-dashboard-logo,
+    .myclinxdash-logo {
+      display: flex;
+      align-items: center;
+    }
+    .myclinx-dashboard-logo-img {
+      display: block;
+      width: 105px;
+      height: auto;
+      max-width: 100%;
+    }
+
+    .myclinx-footer-logo {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .myclinx-footer-logo-img {
+      display: block;
+      width: 180px;
+      height: auto;
+      max-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .myclinx-logo-img {
+        width: 155px;
+      }
+      .myclinx-footer-logo-img {
+        width: 155px;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header class="myclinx-header">
   <div class="myclinx-container myclinx-nav">
-    <a class="myclinx-logo" href="#">
-      <div class="myclinx-logo-word">MYCLIN<span>X</span></div>
-      <div class="myclinx-logo-sub">SMART CLINIC MANAGEMENT</div>
+    <a class="myclinx-logo" href="#" aria-label="myclinx">
+      <img class="myclinx-logo-img" src="MyClinx-FinalLOGO.svg" alt="myclinx - Smart Clinic Management">
     </a>
 
     <button class="myclinx-menu" id="myclinxMenu" aria-label="Open menu">
@@ -209,7 +255,7 @@
                 <div class="myclinx-heromain-dashboard-side">
 
                     <div class="myclinx-heromain-dashboard-logo">
-                        myclinx
+                        <img class="myclinx-dashboard-logo-img" src="MyClinx-FinalLOGO.svg" alt="myclinx">
                     </div>
 
                     <div class="myclinx-heromain-dashboard-menu">
@@ -1052,7 +1098,7 @@
                 <aside class="myclinxdash-sidebar">
 
                     <div class="myclinxdash-logo">
-                        MYCLIN<span>X</span>
+                        <img class="myclinx-dashboard-logo-img" src="MyClinx-FinalLOGO.svg" alt="myclinx">
                     </div>
 
                     <div class="myclinxdash-menu">
@@ -1705,11 +1751,8 @@
             <!-- BRAND -->
             <div class="myclinx-footer-brand">
 
-                <a href="#" class="myclinx-footer-logo">
-                    <span class="myclinx-logo-main">
-                        MYCLIN<span>X</span>
-                    </span>
-                    <small>SMART CLINIC MANAGEMENT</small>
+                <a href="#" class="myclinx-footer-logo" aria-label="myclinx">
+                    <img class="myclinx-footer-logo-img" src="MyClinx-FinalLOGO.svg" alt="myclinx - Smart Clinic Management">
                 </a>
 
                 <p>
@@ -1815,7 +1858,7 @@
         <div class="myclinx-footer-bottom">
 
             <p>
-                © <span id="myclinxYear"></span> Reach Me Onlince | All Rights Reserved.
+                © <span id="myclinxYear"></span> Reach Me Online | All Rights Reserved.
             </p>
 
             <p class="myclinx-made-with">
